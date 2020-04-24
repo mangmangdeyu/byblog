@@ -1,0 +1,860 @@
+2020-03-26 16:23:40.848  INFO 3764 --- [restartedMain] com.zby.ByblogApplication                : Starting ByblogApplication on SC-201811071851 with PID 3764 (D:\byblog\target\classes started by Administrator in D:\byblog)
+2020-03-26 16:23:40.856 DEBUG 3764 --- [restartedMain] com.zby.ByblogApplication                : Running with Spring Boot v2.1.2.RELEASE, Spring v5.1.4.RELEASE
+2020-03-26 16:23:40.856  INFO 3764 --- [restartedMain] com.zby.ByblogApplication                : The following profiles are active: dev
+2020-03-26 16:23:40.910  INFO 3764 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-26 16:23:40.910  INFO 3764 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-26 16:23:41.874  INFO 3764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-26 16:23:41.888  INFO 3764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-26 16:23:41.888  INFO 3764 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2020-03-26 16:23:41.893  INFO 3764 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk-12.0.2\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;G:\app\Administrator\product\11.2.0\dbhome_1\bin;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Windows\System32;C:\Program Files\MySQL\MySQL Server 5.5\bin;D:\JDBC资料\resources\MySql Connector Java 5.1.23\mysql-connector-java-5.1.23-bin.jar;C:\Program Files\Java\jdk-12.0.2\bin;D:\apache-maven-3.5.2\bin;C:\Program Files\VisualSVN Server\bin;C:\Program Files\TortoiseSVN\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2019.2.1\bin;;.]
+2020-03-26 16:23:41.941  INFO 3764 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-26 16:23:41.941  INFO 3764 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1031 ms
+2020-03-26 16:23:42.446  INFO 3764 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-26 16:23:42.568  INFO 3764 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-26 16:23:42.816  INFO 3764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-26 16:23:42.852  INFO 3764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-26 16:23:42.854  INFO 3764 --- [restartedMain] com.zby.ByblogApplication                : Started ByblogApplication in 2.38 seconds (JVM running for 3.175)
+2020-03-26 16:23:56.021  INFO 3764 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-26 16:23:56.022  INFO 3764 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-26 16:23:56.030  INFO 3764 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-03-26 16:23:56.051  INFO 3764 --- [http-nio-8080-exec-1] com.zby.aspect.LogAspect                 : Request:{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.zby.controller.IndexController.index', args=[{}, 1, 6], uri='/'}
+2020-03-26 16:23:56.083  INFO 3764 --- [http-nio-8080-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-03-26 16:23:56.163 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.indexBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM t_blog 
+2020-03-26 16:23:56.174 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.indexBlog_COUNT   : ==> Parameters: 
+2020-03-26 16:23:56.186 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.indexBlog_COUNT   : <==      Total: 1
+2020-03-26 16:23:56.187 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.indexBlog         : ==>  Preparing: select id,title,description,userId,updateTime,views,firstPicture,typeId from t_blog LIMIT ? 
+2020-03-26 16:23:56.188 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.indexBlog         : ==> Parameters: 6(Integer)
+2020-03-26 16:23:56.191 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.TypeDao.getTypeById       : ====>  Preparing: select * from t_type where id=? 
+2020-03-26 16:23:56.191 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.TypeDao.getTypeById       : ====> Parameters: 18(Long)
+2020-03-26 16:23:56.195 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.TypeDao.getTypeById       : <====      Total: 1
+2020-03-26 16:23:56.195 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.UserDao.getUserById       : ====>  Preparing: select * from t_user where id=? 
+2020-03-26 16:23:56.195 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.UserDao.getUserById       : ====> Parameters: 1(Long)
+2020-03-26 16:23:56.199 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.UserDao.getUserById       : <====      Total: 1
+2020-03-26 16:23:56.199 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.indexBlog         : <==      Total: 2
+2020-03-26 16:23:56.204 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.TypeDao.indexType         : ==>  Preparing: select * from t_type limit 6 
+2020-03-26 16:23:56.204 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.TypeDao.indexType         : ==> Parameters: 
+2020-03-26 16:23:56.205 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getBlogJoinType   : ====>  Preparing: select id,title from t_blog where typeId=? 
+2020-03-26 16:23:56.205 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getBlogJoinType   : ====> Parameters: 18(Long)
+2020-03-26 16:23:56.206 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getBlogJoinType   : <====      Total: 2
+2020-03-26 16:23:56.206 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.TypeDao.indexType         : <==      Total: 1
+2020-03-26 16:23:56.209 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.TagDao.indexTag           : ==>  Preparing: select * from t_tag limit 6 
+2020-03-26 16:23:56.210 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.TagDao.indexTag           : ==> Parameters: 
+2020-03-26 16:23:56.212 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getBlogJoinTag    : ====>  Preparing: select id,title from t_blog where id in (select blogsId from t_blog_tags where tagsId = ?) 
+2020-03-26 16:23:56.213 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getBlogJoinTag    : ====> Parameters: 7(Long)
+2020-03-26 16:23:56.216 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getBlogJoinTag    : <====      Total: 2
+2020-03-26 16:23:56.217 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getBlogJoinTag    : ====>  Preparing: select id,title from t_blog where id in (select blogsId from t_blog_tags where tagsId = ?) 
+2020-03-26 16:23:56.217 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getBlogJoinTag    : ====> Parameters: 6(Long)
+2020-03-26 16:23:56.217 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getBlogJoinTag    : <====      Total: 2
+2020-03-26 16:23:56.218 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.TagDao.indexTag           : <==      Total: 2
+2020-03-26 16:23:56.219 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getRecommendBlog  : ==>  Preparing: select id, title from t_blog where recommend=1 order by updateTime desc limit 6 
+2020-03-26 16:23:56.219 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getRecommendBlog  : ==> Parameters: 
+2020-03-26 16:23:56.220 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getRecommendBlog  : <==      Total: 2
+2020-03-26 16:23:56.221  INFO 3764 --- [http-nio-8080-exec-1] com.zby.aspect.LogAspect                 : after.....
+2020-03-26 16:23:56.221  INFO 3764 --- [http-nio-8080-exec-1] com.zby.aspect.LogAspect                 : Result : {}index
+2020-03-26 16:23:56.751  INFO 3764 --- [http-nio-8080-exec-5] com.zby.aspect.LogAspect                 : Request:{url='http://localhost:8080/footer/latestBlog', ip='0:0:0:0:0:0:0:1', classMethod='com.zby.controller.IndexController.latestBlogs', args=[{}], uri='/footer/latestBlog'}
+2020-03-26 16:23:56.752 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.getLatestBlogs    : ==>  Preparing: select id, title from t_blog order by updateTime desc limit 4 
+2020-03-26 16:23:56.752 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.getLatestBlogs    : ==> Parameters: 
+2020-03-26 16:23:56.752 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.getLatestBlogs    : <==      Total: 2
+2020-03-26 16:23:56.755  INFO 3764 --- [http-nio-8080-exec-5] com.zby.aspect.LogAspect                 : after.....
+2020-03-26 16:23:56.755  INFO 3764 --- [http-nio-8080-exec-5] com.zby.aspect.LogAspect                 : Result : {}common/_fragments :: latestBlog
+2020-03-26 16:24:19.134  WARN 3764 --- [http-nio-8080-exec-9] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [149] milliseconds.
+2020-03-26 16:24:19.137 DEBUG 3764 --- [http-nio-8080-exec-9] c.z.m.UserDao.findByUsernameAndPassword  : ==>  Preparing: select * from t_user where username=? and password=? 
+2020-03-26 16:24:19.137 DEBUG 3764 --- [http-nio-8080-exec-9] c.z.m.UserDao.findByUsernameAndPassword  : ==> Parameters: zby(String), 310dcbbf4cce62f762a2aaa148d556bd(String)
+2020-03-26 16:24:19.139 DEBUG 3764 --- [http-nio-8080-exec-9] c.z.m.UserDao.findByUsernameAndPassword  : <==      Total: 1
+2020-03-26 16:24:30.479 DEBUG 3764 --- [http-nio-8080-exec-2] com.zby.mapper.TypeDao.findAll_COUNT     : ==>  Preparing: SELECT count(0) FROM t_type 
+2020-03-26 16:24:30.479 DEBUG 3764 --- [http-nio-8080-exec-2] com.zby.mapper.TypeDao.findAll_COUNT     : ==> Parameters: 
+2020-03-26 16:24:30.480 DEBUG 3764 --- [http-nio-8080-exec-2] com.zby.mapper.TypeDao.findAll_COUNT     : <==      Total: 1
+2020-03-26 16:24:30.480 DEBUG 3764 --- [http-nio-8080-exec-2] com.zby.mapper.TypeDao.findAll           : ==>  Preparing: select * from t_type LIMIT ? 
+2020-03-26 16:24:30.480 DEBUG 3764 --- [http-nio-8080-exec-2] com.zby.mapper.TypeDao.findAll           : ==> Parameters: 4(Integer)
+2020-03-26 16:24:30.481 DEBUG 3764 --- [http-nio-8080-exec-2] com.zby.mapper.BlogDao.getBlogJoinType   : ====>  Preparing: select id,title from t_blog where typeId=? 
+2020-03-26 16:24:30.482 DEBUG 3764 --- [http-nio-8080-exec-2] com.zby.mapper.BlogDao.getBlogJoinType   : ====> Parameters: 18(Long)
+2020-03-26 16:24:30.483 DEBUG 3764 --- [http-nio-8080-exec-2] com.zby.mapper.BlogDao.getBlogJoinType   : <====      Total: 2
+2020-03-26 16:24:30.483 DEBUG 3764 --- [http-nio-8080-exec-2] com.zby.mapper.TypeDao.findAll           : <==      Total: 1
+2020-03-26 16:24:42.087 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.queryBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM t_blog 
+2020-03-26 16:24:42.087 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.queryBlog_COUNT   : ==> Parameters: 
+2020-03-26 16:24:42.090 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.queryBlog_COUNT   : <==      Total: 1
+2020-03-26 16:24:42.091 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.queryBlog         : ==>  Preparing: select id,title,updateTime,recommend,published,typeId from t_blog LIMIT ? 
+2020-03-26 16:24:42.091 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.queryBlog         : ==> Parameters: 4(Integer)
+2020-03-26 16:24:42.092 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.TypeDao.getTypeById       : ====>  Preparing: select * from t_type where id=? 
+2020-03-26 16:24:42.092 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.TypeDao.getTypeById       : ====> Parameters: 18(Long)
+2020-03-26 16:24:42.093 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.TypeDao.getTypeById       : <====      Total: 1
+2020-03-26 16:24:42.093 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.queryBlog         : <==      Total: 2
+2020-03-26 16:24:42.095 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.TypeDao.getAdminType      : ==>  Preparing: select * from t_type 
+2020-03-26 16:24:42.095 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.TypeDao.getAdminType      : ==> Parameters: 
+2020-03-26 16:24:42.095 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.TypeDao.getAdminType      : <==      Total: 1
+2020-03-26 16:24:42.096 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.TagDao.getAdminTag        : ==>  Preparing: select * from t_tag 
+2020-03-26 16:24:42.096 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.TagDao.getAdminTag        : ==> Parameters: 
+2020-03-26 16:24:42.097 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.TagDao.getAdminTag        : <==      Total: 2
+2020-03-26 16:25:08.928 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.TypeDao.getAdminType      : ==>  Preparing: select * from t_type 
+2020-03-26 16:25:08.928 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.TypeDao.getAdminType      : ==> Parameters: 
+2020-03-26 16:25:08.929 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.TypeDao.getAdminType      : <==      Total: 1
+2020-03-26 16:25:08.930 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.TagDao.getAdminTag        : ==>  Preparing: select * from t_tag 
+2020-03-26 16:25:08.930 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.TagDao.getAdminTag        : ==> Parameters: 
+2020-03-26 16:25:08.931 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.TagDao.getAdminTag        : <==      Total: 2
+2020-03-26 16:25:08.933 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getBlogById       : ==>  Preparing: select * from t_blog where id=? 
+2020-03-26 16:25:08.933 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getBlogById       : ==> Parameters: 36(Long)
+2020-03-26 16:25:08.934 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.UserDao.getUserById       : ====>  Preparing: select * from t_user where id=? 
+2020-03-26 16:25:08.934 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.UserDao.getUserById       : ====> Parameters: 1(Long)
+2020-03-26 16:25:08.935 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.UserDao.getUserById       : <====      Total: 1
+2020-03-26 16:25:08.935 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.TypeDao.getTypeById       : ====>  Preparing: select * from t_type where id=? 
+2020-03-26 16:25:08.935 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.TypeDao.getTypeById       : ====> Parameters: 18(Long)
+2020-03-26 16:25:08.936 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.TypeDao.getTypeById       : <====      Total: 1
+2020-03-26 16:25:08.936 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.TagDao.findTagByBlogId    : ====>  Preparing: select * from t_tag where id in (select tagsId from t_blog_tags where blogsId = ?) 
+2020-03-26 16:25:08.936 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.TagDao.findTagByBlogId    : ====> Parameters: 36(Long)
+2020-03-26 16:25:08.936 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.TagDao.findTagByBlogId    : <====      Total: 2
+2020-03-26 16:25:08.937 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getBlogById       : <==      Total: 1
+2020-03-26 16:25:29.262 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TypeDao.getAdminType      : ==>  Preparing: select * from t_type 
+2020-03-26 16:25:29.262 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TypeDao.getAdminType      : ==> Parameters: 
+2020-03-26 16:25:29.263 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TypeDao.getAdminType      : <==      Total: 1
+2020-03-26 16:25:29.264 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TagDao.getAdminTag        : ==>  Preparing: select * from t_tag 
+2020-03-26 16:25:29.265 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TagDao.getAdminTag        : ==> Parameters: 
+2020-03-26 16:25:29.265 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TagDao.getAdminTag        : <==      Total: 2
+2020-03-26 16:25:29.266 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.BlogDao.getBlogById       : ==>  Preparing: select * from t_blog where id=? 
+2020-03-26 16:25:29.266 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.BlogDao.getBlogById       : ==> Parameters: 36(Long)
+2020-03-26 16:25:29.268 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.UserDao.getUserById       : ====>  Preparing: select * from t_user where id=? 
+2020-03-26 16:25:29.268 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.UserDao.getUserById       : ====> Parameters: 1(Long)
+2020-03-26 16:25:29.268 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.UserDao.getUserById       : <====      Total: 1
+2020-03-26 16:25:29.269 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TypeDao.getTypeById       : ====>  Preparing: select * from t_type where id=? 
+2020-03-26 16:25:29.269 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TypeDao.getTypeById       : ====> Parameters: 18(Long)
+2020-03-26 16:25:29.269 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TypeDao.getTypeById       : <====      Total: 1
+2020-03-26 16:25:29.270 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TagDao.findTagByBlogId    : ====>  Preparing: select * from t_tag where id in (select tagsId from t_blog_tags where blogsId = ?) 
+2020-03-26 16:25:29.270 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TagDao.findTagByBlogId    : ====> Parameters: 36(Long)
+2020-03-26 16:25:29.270 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TagDao.findTagByBlogId    : <====      Total: 2
+2020-03-26 16:25:29.270 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.BlogDao.getBlogById       : <==      Total: 1
+2020-03-26 16:29:45.158 ERROR 3764 --- [http-nio-8080-exec-8] c.z.handler.ControllerExceptionHandler   : Request Url : http://localhost:8080/admin/login, Exception : {}
+
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:200)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:422)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:368)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:65)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:401)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1231)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1014)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1417)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+
+2020-03-26 16:29:45.160  WARN 3764 --- [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-03-26 16:31:04.565 DEBUG 3764 --- [http-nio-8080-exec-3] c.z.m.UserDao.findByUsernameAndPassword  : ==>  Preparing: select * from t_user where username=? and password=? 
+2020-03-26 16:31:04.566 DEBUG 3764 --- [http-nio-8080-exec-3] c.z.m.UserDao.findByUsernameAndPassword  : ==> Parameters: zby(String), 310dcbbf4cce62f762a2aaa148d556bd(String)
+2020-03-26 16:31:04.568 DEBUG 3764 --- [http-nio-8080-exec-3] c.z.m.UserDao.findByUsernameAndPassword  : <==      Total: 1
+2020-03-26 16:31:24.439  INFO 3764 --- [http-nio-8080-exec-5] com.zby.aspect.LogAspect                 : Request:{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.zby.controller.IndexController.index', args=[{}, 1, 6], uri='/'}
+2020-03-26 16:31:24.440 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.indexBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM t_blog 
+2020-03-26 16:31:24.440 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.indexBlog_COUNT   : ==> Parameters: 
+2020-03-26 16:31:24.441 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.indexBlog_COUNT   : <==      Total: 1
+2020-03-26 16:31:24.441 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.indexBlog         : ==>  Preparing: select id,title,description,userId,updateTime,views,firstPicture,typeId from t_blog LIMIT ? 
+2020-03-26 16:31:24.442 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.indexBlog         : ==> Parameters: 6(Integer)
+2020-03-26 16:31:24.442 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.TypeDao.getTypeById       : ====>  Preparing: select * from t_type where id=? 
+2020-03-26 16:31:24.443 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.TypeDao.getTypeById       : ====> Parameters: 18(Long)
+2020-03-26 16:31:24.443 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.TypeDao.getTypeById       : <====      Total: 1
+2020-03-26 16:31:24.444 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.UserDao.getUserById       : ====>  Preparing: select * from t_user where id=? 
+2020-03-26 16:31:24.444 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.UserDao.getUserById       : ====> Parameters: 1(Long)
+2020-03-26 16:31:24.444 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.UserDao.getUserById       : <====      Total: 1
+2020-03-26 16:31:24.445 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.indexBlog         : <==      Total: 2
+2020-03-26 16:31:24.446 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.TypeDao.indexType         : ==>  Preparing: select * from t_type limit 6 
+2020-03-26 16:31:24.446 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.TypeDao.indexType         : ==> Parameters: 
+2020-03-26 16:31:24.446 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.getBlogJoinType   : ====>  Preparing: select id,title from t_blog where typeId=? 
+2020-03-26 16:31:24.446 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.getBlogJoinType   : ====> Parameters: 18(Long)
+2020-03-26 16:31:24.447 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.getBlogJoinType   : <====      Total: 2
+2020-03-26 16:31:24.447 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.TypeDao.indexType         : <==      Total: 1
+2020-03-26 16:31:24.448 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.TagDao.indexTag           : ==>  Preparing: select * from t_tag limit 6 
+2020-03-26 16:31:24.448 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.TagDao.indexTag           : ==> Parameters: 
+2020-03-26 16:31:24.449 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.getBlogJoinTag    : ====>  Preparing: select id,title from t_blog where id in (select blogsId from t_blog_tags where tagsId = ?) 
+2020-03-26 16:31:24.449 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.getBlogJoinTag    : ====> Parameters: 7(Long)
+2020-03-26 16:31:24.450 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.getBlogJoinTag    : <====      Total: 2
+2020-03-26 16:31:24.450 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.getBlogJoinTag    : ====>  Preparing: select id,title from t_blog where id in (select blogsId from t_blog_tags where tagsId = ?) 
+2020-03-26 16:31:24.451 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.getBlogJoinTag    : ====> Parameters: 6(Long)
+2020-03-26 16:31:24.451 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.getBlogJoinTag    : <====      Total: 2
+2020-03-26 16:31:24.451 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.TagDao.indexTag           : <==      Total: 2
+2020-03-26 16:31:24.452 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.getRecommendBlog  : ==>  Preparing: select id, title from t_blog where recommend=1 order by updateTime desc limit 6 
+2020-03-26 16:31:24.452 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.getRecommendBlog  : ==> Parameters: 
+2020-03-26 16:31:24.453 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.getRecommendBlog  : <==      Total: 2
+2020-03-26 16:31:24.453  INFO 3764 --- [http-nio-8080-exec-5] com.zby.aspect.LogAspect                 : after.....
+2020-03-26 16:31:24.453  INFO 3764 --- [http-nio-8080-exec-5] com.zby.aspect.LogAspect                 : Result : {}index
+2020-03-26 16:31:25.741  INFO 3764 --- [http-nio-8080-exec-9] com.zby.aspect.LogAspect                 : Request:{url='http://localhost:8080/footer/latestBlog', ip='0:0:0:0:0:0:0:1', classMethod='com.zby.controller.IndexController.latestBlogs', args=[{}], uri='/footer/latestBlog'}
+2020-03-26 16:31:25.741 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.getLatestBlogs    : ==>  Preparing: select id, title from t_blog order by updateTime desc limit 4 
+2020-03-26 16:31:25.741 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.getLatestBlogs    : ==> Parameters: 
+2020-03-26 16:31:25.742 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.getLatestBlogs    : <==      Total: 2
+2020-03-26 16:31:25.743  INFO 3764 --- [http-nio-8080-exec-9] com.zby.aspect.LogAspect                 : after.....
+2020-03-26 16:31:25.743  INFO 3764 --- [http-nio-8080-exec-9] com.zby.aspect.LogAspect                 : Result : {}common/_fragments :: latestBlog
+2020-03-26 16:31:29.657  INFO 3764 --- [http-nio-8080-exec-4] com.zby.aspect.LogAspect                 : Request:{url='http://localhost:8080/blog/35', ip='0:0:0:0:0:0:0:1', classMethod='com.zby.controller.IndexController.blog', args=[35, {}], uri='/blog/35'}
+2020-03-26 16:31:29.658 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.BlogDao.getBlogById       : ==>  Preparing: select * from t_blog where id=? 
+2020-03-26 16:31:29.658 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.BlogDao.getBlogById       : ==> Parameters: 35(Long)
+2020-03-26 16:31:29.659 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.UserDao.getUserById       : ====>  Preparing: select * from t_user where id=? 
+2020-03-26 16:31:29.659 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.UserDao.getUserById       : ====> Parameters: 1(Long)
+2020-03-26 16:31:29.659 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.UserDao.getUserById       : <====      Total: 1
+2020-03-26 16:31:29.660 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.TypeDao.getTypeById       : ====>  Preparing: select * from t_type where id=? 
+2020-03-26 16:31:29.660 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.TypeDao.getTypeById       : ====> Parameters: 18(Long)
+2020-03-26 16:31:29.660 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.TypeDao.getTypeById       : <====      Total: 1
+2020-03-26 16:31:29.660 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.TagDao.findTagByBlogId    : ====>  Preparing: select * from t_tag where id in (select tagsId from t_blog_tags where blogsId = ?) 
+2020-03-26 16:31:29.661 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.TagDao.findTagByBlogId    : ====> Parameters: 35(Long)
+2020-03-26 16:31:29.661 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.TagDao.findTagByBlogId    : <====      Total: 2
+2020-03-26 16:31:29.662 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.BlogDao.getBlogById       : <==      Total: 1
+2020-03-26 16:31:29.680 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.BlogDao.updateViews       : ==>  Preparing: update t_blog set views=views+1 where id=? 
+2020-03-26 16:31:29.680 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.BlogDao.updateViews       : ==> Parameters: 35(Long)
+2020-03-26 16:31:29.682 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.BlogDao.updateViews       : <==    Updates: 1
+2020-03-26 16:31:29.682  INFO 3764 --- [http-nio-8080-exec-4] com.zby.aspect.LogAspect                 : after.....
+2020-03-26 16:31:29.682  INFO 3764 --- [http-nio-8080-exec-4] com.zby.aspect.LogAspect                 : Result : {}blog
+2020-03-26 16:31:45.638  INFO 3764 --- [http-nio-8080-exec-6] com.zby.aspect.LogAspect                 : Request:{url='http://localhost:8080/footer/latestBlog', ip='0:0:0:0:0:0:0:1', classMethod='com.zby.controller.IndexController.latestBlogs', args=[{}], uri='/footer/latestBlog'}
+2020-03-26 16:31:45.638 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.getLatestBlogs    : ==>  Preparing: select id, title from t_blog order by updateTime desc limit 4 
+2020-03-26 16:31:45.639 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.getLatestBlogs    : ==> Parameters: 
+2020-03-26 16:31:45.639 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.getLatestBlogs    : <==      Total: 2
+2020-03-26 16:31:45.640  INFO 3764 --- [http-nio-8080-exec-6] com.zby.aspect.LogAspect                 : after.....
+2020-03-26 16:31:45.640  INFO 3764 --- [http-nio-8080-exec-6] com.zby.aspect.LogAspect                 : Result : {}common/_fragments :: latestBlog
+2020-03-26 16:31:45.743  INFO 3764 --- [http-nio-8080-exec-2] com.zby.aspect.LogAspect                 : Request:{url='http://localhost:8080/comments/35', ip='0:0:0:0:0:0:0:1', classMethod='com.zby.controller.CommentController.comments', args=[35, {}], uri='/comments/35'}
+2020-03-26 16:31:45.748 DEBUG 3764 --- [http-nio-8080-exec-2] c.z.m.CommentDao.getCommentByIdNoFather  : ==>  Preparing: select * from t_comment where blogId=? and parentCommentId = -1 order by createTime desc 
+2020-03-26 16:31:45.748 DEBUG 3764 --- [http-nio-8080-exec-2] c.z.m.CommentDao.getCommentByIdNoFather  : ==> Parameters: 35(Long)
+2020-03-26 16:31:45.752 DEBUG 3764 --- [http-nio-8080-exec-2] c.z.m.CommentDao.getCommentByIdNoFather  : <==      Total: 0
+2020-03-26 16:31:45.753  INFO 3764 --- [http-nio-8080-exec-2] com.zby.aspect.LogAspect                 : after.....
+2020-03-26 16:31:45.753  INFO 3764 --- [http-nio-8080-exec-2] com.zby.aspect.LogAspect                 : Result : {}blog :: commentList
+2020-03-26 16:32:00.174  INFO 3764 --- [http-nio-8080-exec-7] com.zby.aspect.LogAspect                 : Request:{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.zby.controller.IndexController.index', args=[{}, 1, 6], uri='/'}
+2020-03-26 16:32:00.175 DEBUG 3764 --- [http-nio-8080-exec-7] com.zby.mapper.BlogDao.indexBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM t_blog 
+2020-03-26 16:32:00.175 DEBUG 3764 --- [http-nio-8080-exec-7] com.zby.mapper.BlogDao.indexBlog_COUNT   : ==> Parameters: 
+2020-03-26 16:32:00.176 DEBUG 3764 --- [http-nio-8080-exec-7] com.zby.mapper.BlogDao.indexBlog_COUNT   : <==      Total: 1
+2020-03-26 16:32:00.176 DEBUG 3764 --- [http-nio-8080-exec-7] com.zby.mapper.BlogDao.indexBlog         : ==>  Preparing: select id,title,description,userId,updateTime,views,firstPicture,typeId from t_blog LIMIT ? 
+2020-03-26 16:32:00.176 DEBUG 3764 --- [http-nio-8080-exec-7] com.zby.mapper.BlogDao.indexBlog         : ==> Parameters: 6(Integer)
+2020-03-26 16:32:00.177 DEBUG 3764 --- [http-nio-8080-exec-7] com.zby.mapper.TypeDao.getTypeById       : ====>  Preparing: select * from t_type where id=? 
+2020-03-26 16:32:00.177 DEBUG 3764 --- [http-nio-8080-exec-7] com.zby.mapper.TypeDao.getTypeById       : ====> Parameters: 18(Long)
+2020-03-26 16:32:00.178 DEBUG 3764 --- [http-nio-8080-exec-7] com.zby.mapper.TypeDao.getTypeById       : <====      Total: 1
+2020-03-26 16:32:00.178 DEBUG 3764 --- [http-nio-8080-exec-7] com.zby.mapper.UserDao.getUserById       : ====>  Preparing: select * from t_user where id=? 
+2020-03-26 16:32:00.178 DEBUG 3764 --- [http-nio-8080-exec-7] com.zby.mapper.UserDao.getUserById       : ====> Parameters: 1(Long)
+2020-03-26 16:32:00.179 DEBUG 3764 --- [http-nio-8080-exec-7] com.zby.mapper.UserDao.getUserById       : <====      Total: 1
+2020-03-26 16:32:00.179 DEBUG 3764 --- [http-nio-8080-exec-7] com.zby.mapper.BlogDao.indexBlog         : <==      Total: 2
+2020-03-26 16:32:00.181 DEBUG 3764 --- [http-nio-8080-exec-7] com.zby.mapper.TypeDao.indexType         : ==>  Preparing: select * from t_type limit 6 
+2020-03-26 16:32:00.181 DEBUG 3764 --- [http-nio-8080-exec-7] com.zby.mapper.TypeDao.indexType         : ==> Parameters: 
+2020-03-26 16:32:00.181 DEBUG 3764 --- [http-nio-8080-exec-7] com.zby.mapper.BlogDao.getBlogJoinType   : ====>  Preparing: select id,title from t_blog where typeId=? 
+2020-03-26 16:32:00.181 DEBUG 3764 --- [http-nio-8080-exec-7] com.zby.mapper.BlogDao.getBlogJoinType   : ====> Parameters: 18(Long)
+2020-03-26 16:32:00.182 DEBUG 3764 --- [http-nio-8080-exec-7] com.zby.mapper.BlogDao.getBlogJoinType   : <====      Total: 2
+2020-03-26 16:32:00.182 DEBUG 3764 --- [http-nio-8080-exec-7] com.zby.mapper.TypeDao.indexType         : <==      Total: 1
+2020-03-26 16:32:00.183 DEBUG 3764 --- [http-nio-8080-exec-7] com.zby.mapper.TagDao.indexTag           : ==>  Preparing: select * from t_tag limit 6 
+2020-03-26 16:32:00.183 DEBUG 3764 --- [http-nio-8080-exec-7] com.zby.mapper.TagDao.indexTag           : ==> Parameters: 
+2020-03-26 16:32:00.183 DEBUG 3764 --- [http-nio-8080-exec-7] com.zby.mapper.BlogDao.getBlogJoinTag    : ====>  Preparing: select id,title from t_blog where id in (select blogsId from t_blog_tags where tagsId = ?) 
+2020-03-26 16:32:00.184 DEBUG 3764 --- [http-nio-8080-exec-7] com.zby.mapper.BlogDao.getBlogJoinTag    : ====> Parameters: 7(Long)
+2020-03-26 16:32:00.184 DEBUG 3764 --- [http-nio-8080-exec-7] com.zby.mapper.BlogDao.getBlogJoinTag    : <====      Total: 2
+2020-03-26 16:32:00.184 DEBUG 3764 --- [http-nio-8080-exec-7] com.zby.mapper.BlogDao.getBlogJoinTag    : ====>  Preparing: select id,title from t_blog where id in (select blogsId from t_blog_tags where tagsId = ?) 
+2020-03-26 16:32:00.184 DEBUG 3764 --- [http-nio-8080-exec-7] com.zby.mapper.BlogDao.getBlogJoinTag    : ====> Parameters: 6(Long)
+2020-03-26 16:32:00.185 DEBUG 3764 --- [http-nio-8080-exec-7] com.zby.mapper.BlogDao.getBlogJoinTag    : <====      Total: 2
+2020-03-26 16:32:00.185 DEBUG 3764 --- [http-nio-8080-exec-7] com.zby.mapper.TagDao.indexTag           : <==      Total: 2
+2020-03-26 16:32:00.186 DEBUG 3764 --- [http-nio-8080-exec-7] com.zby.mapper.BlogDao.getRecommendBlog  : ==>  Preparing: select id, title from t_blog where recommend=1 order by updateTime desc limit 6 
+2020-03-26 16:32:00.186 DEBUG 3764 --- [http-nio-8080-exec-7] com.zby.mapper.BlogDao.getRecommendBlog  : ==> Parameters: 
+2020-03-26 16:32:00.187 DEBUG 3764 --- [http-nio-8080-exec-7] com.zby.mapper.BlogDao.getRecommendBlog  : <==      Total: 2
+2020-03-26 16:32:00.187  INFO 3764 --- [http-nio-8080-exec-7] com.zby.aspect.LogAspect                 : after.....
+2020-03-26 16:32:00.187  INFO 3764 --- [http-nio-8080-exec-7] com.zby.aspect.LogAspect                 : Result : {}index
+2020-03-26 16:32:24.352 DEBUG 3764 --- [http-nio-8080-exec-3] c.z.m.UserDao.findByUsernameAndPassword  : ==>  Preparing: select * from t_user where username=? and password=? 
+2020-03-26 16:32:24.352 DEBUG 3764 --- [http-nio-8080-exec-3] c.z.m.UserDao.findByUsernameAndPassword  : ==> Parameters: zby(String), 310dcbbf4cce62f762a2aaa148d556bd(String)
+2020-03-26 16:32:24.353 DEBUG 3764 --- [http-nio-8080-exec-3] c.z.m.UserDao.findByUsernameAndPassword  : <==      Total: 1
+2020-03-26 16:32:29.070 DEBUG 3764 --- [http-nio-8080-exec-10] com.zby.mapper.TypeDao.findAll_COUNT     : ==>  Preparing: SELECT count(0) FROM t_type 
+2020-03-26 16:32:29.070 DEBUG 3764 --- [http-nio-8080-exec-10] com.zby.mapper.TypeDao.findAll_COUNT     : ==> Parameters: 
+2020-03-26 16:32:29.070 DEBUG 3764 --- [http-nio-8080-exec-10] com.zby.mapper.TypeDao.findAll_COUNT     : <==      Total: 1
+2020-03-26 16:32:29.071 DEBUG 3764 --- [http-nio-8080-exec-10] com.zby.mapper.TypeDao.findAll           : ==>  Preparing: select * from t_type LIMIT ? 
+2020-03-26 16:32:29.071 DEBUG 3764 --- [http-nio-8080-exec-10] com.zby.mapper.TypeDao.findAll           : ==> Parameters: 4(Integer)
+2020-03-26 16:32:29.072 DEBUG 3764 --- [http-nio-8080-exec-10] com.zby.mapper.BlogDao.getBlogJoinType   : ====>  Preparing: select id,title from t_blog where typeId=? 
+2020-03-26 16:32:29.072 DEBUG 3764 --- [http-nio-8080-exec-10] com.zby.mapper.BlogDao.getBlogJoinType   : ====> Parameters: 18(Long)
+2020-03-26 16:32:29.072 DEBUG 3764 --- [http-nio-8080-exec-10] com.zby.mapper.BlogDao.getBlogJoinType   : <====      Total: 2
+2020-03-26 16:32:29.073 DEBUG 3764 --- [http-nio-8080-exec-10] com.zby.mapper.TypeDao.findAll           : <==      Total: 1
+2020-03-26 16:32:48.510 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.queryBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM t_blog 
+2020-03-26 16:32:48.511 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.queryBlog_COUNT   : ==> Parameters: 
+2020-03-26 16:32:48.511 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.queryBlog_COUNT   : <==      Total: 1
+2020-03-26 16:32:48.512 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.queryBlog         : ==>  Preparing: select id,title,updateTime,recommend,published,typeId from t_blog LIMIT ? 
+2020-03-26 16:32:48.512 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.queryBlog         : ==> Parameters: 4(Integer)
+2020-03-26 16:32:48.512 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getTypeById       : ====>  Preparing: select * from t_type where id=? 
+2020-03-26 16:32:48.513 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getTypeById       : ====> Parameters: 18(Long)
+2020-03-26 16:32:48.513 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getTypeById       : <====      Total: 1
+2020-03-26 16:32:48.514 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.queryBlog         : <==      Total: 2
+2020-03-26 16:32:48.515 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getAdminType      : ==>  Preparing: select * from t_type 
+2020-03-26 16:32:48.515 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getAdminType      : ==> Parameters: 
+2020-03-26 16:32:48.515 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getAdminType      : <==      Total: 1
+2020-03-26 16:32:48.516 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.TagDao.getAdminTag        : ==>  Preparing: select * from t_tag 
+2020-03-26 16:32:48.516 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.TagDao.getAdminTag        : ==> Parameters: 
+2020-03-26 16:32:48.517 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.TagDao.getAdminTag        : <==      Total: 2
+2020-03-26 16:32:52.261 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TypeDao.getAdminType      : ==>  Preparing: select * from t_type 
+2020-03-26 16:32:52.262 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TypeDao.getAdminType      : ==> Parameters: 
+2020-03-26 16:32:52.262 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TypeDao.getAdminType      : <==      Total: 1
+2020-03-26 16:32:52.263 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TagDao.getAdminTag        : ==>  Preparing: select * from t_tag 
+2020-03-26 16:32:52.263 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TagDao.getAdminTag        : ==> Parameters: 
+2020-03-26 16:32:52.264 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TagDao.getAdminTag        : <==      Total: 2
+2020-03-26 16:32:52.265 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.BlogDao.getBlogById       : ==>  Preparing: select * from t_blog where id=? 
+2020-03-26 16:32:52.265 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.BlogDao.getBlogById       : ==> Parameters: 36(Long)
+2020-03-26 16:32:52.266 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.UserDao.getUserById       : ====>  Preparing: select * from t_user where id=? 
+2020-03-26 16:32:52.266 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.UserDao.getUserById       : ====> Parameters: 1(Long)
+2020-03-26 16:32:52.267 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.UserDao.getUserById       : <====      Total: 1
+2020-03-26 16:32:52.267 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TypeDao.getTypeById       : ====>  Preparing: select * from t_type where id=? 
+2020-03-26 16:32:52.267 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TypeDao.getTypeById       : ====> Parameters: 18(Long)
+2020-03-26 16:32:52.267 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TypeDao.getTypeById       : <====      Total: 1
+2020-03-26 16:32:52.268 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TagDao.findTagByBlogId    : ====>  Preparing: select * from t_tag where id in (select tagsId from t_blog_tags where blogsId = ?) 
+2020-03-26 16:32:52.268 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TagDao.findTagByBlogId    : ====> Parameters: 36(Long)
+2020-03-26 16:32:52.268 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TagDao.findTagByBlogId    : <====      Total: 2
+2020-03-26 16:32:52.268 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.BlogDao.getBlogById       : <==      Total: 1
+2020-03-26 16:35:55.650 DEBUG 3764 --- [http-nio-8080-exec-3] com.zby.mapper.TagDao.getById            : ==>  Preparing: select * from t_tag where id=? 
+2020-03-26 16:35:55.650 DEBUG 3764 --- [http-nio-8080-exec-3] com.zby.mapper.TagDao.getById            : ==> Parameters: 7(Long)
+2020-03-26 16:35:55.651 DEBUG 3764 --- [http-nio-8080-exec-3] com.zby.mapper.TagDao.getById            : <==      Total: 1
+2020-03-26 16:35:55.651 DEBUG 3764 --- [http-nio-8080-exec-3] com.zby.mapper.TagDao.getById            : ==>  Preparing: select * from t_tag where id=? 
+2020-03-26 16:35:55.651 DEBUG 3764 --- [http-nio-8080-exec-3] com.zby.mapper.TagDao.getById            : ==> Parameters: 6(Long)
+2020-03-26 16:35:55.652 DEBUG 3764 --- [http-nio-8080-exec-3] com.zby.mapper.TagDao.getById            : <==      Total: 1
+2020-03-26 16:35:55.653 DEBUG 3764 --- [http-nio-8080-exec-3] com.zby.mapper.BlogDao.deleteBlogAndTag  : ==>  Preparing: delete from t_blog_tags where blogsId = ? 
+2020-03-26 16:35:55.653 DEBUG 3764 --- [http-nio-8080-exec-3] com.zby.mapper.BlogDao.deleteBlogAndTag  : ==> Parameters: 36(Long)
+2020-03-26 16:35:55.653 DEBUG 3764 --- [http-nio-8080-exec-3] com.zby.mapper.BlogDao.deleteBlogAndTag  : <==    Updates: 2
+2020-03-26 16:35:55.653 DEBUG 3764 --- [http-nio-8080-exec-3] com.zby.mapper.BlogDao.saveBlogAndTag    : ==>  Preparing: insert into t_blog_tags(blogsId,tagsId) values (?,?) 
+2020-03-26 16:35:55.654 DEBUG 3764 --- [http-nio-8080-exec-3] com.zby.mapper.BlogDao.saveBlogAndTag    : ==> Parameters: 36(Long), 7(Long)
+2020-03-26 16:35:55.654 DEBUG 3764 --- [http-nio-8080-exec-3] com.zby.mapper.BlogDao.saveBlogAndTag    : <==    Updates: 1
+2020-03-26 16:35:55.654 DEBUG 3764 --- [http-nio-8080-exec-3] com.zby.mapper.BlogDao.saveBlogAndTag    : ==>  Preparing: insert into t_blog_tags(blogsId,tagsId) values (?,?) 
+2020-03-26 16:35:55.654 DEBUG 3764 --- [http-nio-8080-exec-3] com.zby.mapper.BlogDao.saveBlogAndTag    : ==> Parameters: 36(Long), 6(Long)
+2020-03-26 16:35:55.654 DEBUG 3764 --- [http-nio-8080-exec-3] com.zby.mapper.BlogDao.saveBlogAndTag    : <==    Updates: 1
+2020-03-26 16:35:55.655 DEBUG 3764 --- [http-nio-8080-exec-3] com.zby.mapper.BlogDao.updateBlog        : ==>  Preparing: update t_blog set title=?,content=?,firstPicture=?,flag=?,appreciation=?,shareStatement=?,commentable=?,published=?,recommend=?,updateTime=?,typeId=?,description=? where id = ? 
+2020-03-26 16:35:55.656 DEBUG 3764 --- [http-nio-8080-exec-3] com.zby.mapper.BlogDao.updateBlog        : ==> Parameters: 平衡二叉树(String), &emsp;左子树和右子树的高度差的绝对值不超过1.
+![平衡二叉树与二差排序树的差别](/pictures/avl2.png "平衡二叉树与二差排序树的差别")
+
+#### 转化过程
+![变化过程1](/pictures/avl3.png "变化过程1")
+![变化过程2](/pictures/avl4.png "变化过程2")
+![变化过程3](/pictures/avl5.png "变化过程3")(String), https://unsplash.it/800/450?image=1002(String), 原创(String), true(Boolean), true(Boolean), true(Boolean), true(Boolean), true(Boolean), 2020-03-26 16:35:55.655(Timestamp), 18(Long), (String), 36(Long)
+2020-03-26 16:35:55.656 DEBUG 3764 --- [http-nio-8080-exec-3] com.zby.mapper.BlogDao.updateBlog        : <==    Updates: 1
+2020-03-26 16:35:55.666 DEBUG 3764 --- [http-nio-8080-exec-10] com.zby.mapper.BlogDao.queryBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM t_blog 
+2020-03-26 16:35:55.666 DEBUG 3764 --- [http-nio-8080-exec-10] com.zby.mapper.BlogDao.queryBlog_COUNT   : ==> Parameters: 
+2020-03-26 16:35:55.666 DEBUG 3764 --- [http-nio-8080-exec-10] com.zby.mapper.BlogDao.queryBlog_COUNT   : <==      Total: 1
+2020-03-26 16:35:55.666 DEBUG 3764 --- [http-nio-8080-exec-10] com.zby.mapper.BlogDao.queryBlog         : ==>  Preparing: select id,title,updateTime,recommend,published,typeId from t_blog LIMIT ? 
+2020-03-26 16:35:55.667 DEBUG 3764 --- [http-nio-8080-exec-10] com.zby.mapper.BlogDao.queryBlog         : ==> Parameters: 4(Integer)
+2020-03-26 16:35:55.667 DEBUG 3764 --- [http-nio-8080-exec-10] com.zby.mapper.TypeDao.getTypeById       : ====>  Preparing: select * from t_type where id=? 
+2020-03-26 16:35:55.667 DEBUG 3764 --- [http-nio-8080-exec-10] com.zby.mapper.TypeDao.getTypeById       : ====> Parameters: 18(Long)
+2020-03-26 16:35:55.668 DEBUG 3764 --- [http-nio-8080-exec-10] com.zby.mapper.TypeDao.getTypeById       : <====      Total: 1
+2020-03-26 16:35:55.668 DEBUG 3764 --- [http-nio-8080-exec-10] com.zby.mapper.BlogDao.queryBlog         : <==      Total: 2
+2020-03-26 16:35:55.669 DEBUG 3764 --- [http-nio-8080-exec-10] com.zby.mapper.TypeDao.getAdminType      : ==>  Preparing: select * from t_type 
+2020-03-26 16:35:55.669 DEBUG 3764 --- [http-nio-8080-exec-10] com.zby.mapper.TypeDao.getAdminType      : ==> Parameters: 
+2020-03-26 16:35:55.669 DEBUG 3764 --- [http-nio-8080-exec-10] com.zby.mapper.TypeDao.getAdminType      : <==      Total: 1
+2020-03-26 16:35:55.670 DEBUG 3764 --- [http-nio-8080-exec-10] com.zby.mapper.TagDao.getAdminTag        : ==>  Preparing: select * from t_tag 
+2020-03-26 16:35:55.670 DEBUG 3764 --- [http-nio-8080-exec-10] com.zby.mapper.TagDao.getAdminTag        : ==> Parameters: 
+2020-03-26 16:35:55.671 DEBUG 3764 --- [http-nio-8080-exec-10] com.zby.mapper.TagDao.getAdminTag        : <==      Total: 2
+2020-03-26 16:36:22.600  INFO 3764 --- [http-nio-8080-exec-9] com.zby.aspect.LogAspect                 : Request:{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.zby.controller.IndexController.index', args=[{}, 1, 6], uri='/'}
+2020-03-26 16:36:22.601 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.indexBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM t_blog 
+2020-03-26 16:36:22.601 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.indexBlog_COUNT   : ==> Parameters: 
+2020-03-26 16:36:22.602 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.indexBlog_COUNT   : <==      Total: 1
+2020-03-26 16:36:22.602 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.indexBlog         : ==>  Preparing: select id,title,description,userId,updateTime,views,firstPicture,typeId from t_blog LIMIT ? 
+2020-03-26 16:36:22.602 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.indexBlog         : ==> Parameters: 6(Integer)
+2020-03-26 16:36:22.603 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getTypeById       : ====>  Preparing: select * from t_type where id=? 
+2020-03-26 16:36:22.603 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getTypeById       : ====> Parameters: 18(Long)
+2020-03-26 16:36:22.603 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getTypeById       : <====      Total: 1
+2020-03-26 16:36:22.603 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.UserDao.getUserById       : ====>  Preparing: select * from t_user where id=? 
+2020-03-26 16:36:22.604 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.UserDao.getUserById       : ====> Parameters: 1(Long)
+2020-03-26 16:36:22.604 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.UserDao.getUserById       : <====      Total: 1
+2020-03-26 16:36:22.604 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.indexBlog         : <==      Total: 2
+2020-03-26 16:36:22.606 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.indexType         : ==>  Preparing: select * from t_type limit 6 
+2020-03-26 16:36:22.606 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.indexType         : ==> Parameters: 
+2020-03-26 16:36:22.606 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.getBlogJoinType   : ====>  Preparing: select id,title from t_blog where typeId=? 
+2020-03-26 16:36:22.606 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.getBlogJoinType   : ====> Parameters: 18(Long)
+2020-03-26 16:36:22.607 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.getBlogJoinType   : <====      Total: 2
+2020-03-26 16:36:22.607 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.indexType         : <==      Total: 1
+2020-03-26 16:36:22.608 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.TagDao.indexTag           : ==>  Preparing: select * from t_tag limit 6 
+2020-03-26 16:36:22.608 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.TagDao.indexTag           : ==> Parameters: 
+2020-03-26 16:36:22.609 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.getBlogJoinTag    : ====>  Preparing: select id,title from t_blog where id in (select blogsId from t_blog_tags where tagsId = ?) 
+2020-03-26 16:36:22.609 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.getBlogJoinTag    : ====> Parameters: 7(Long)
+2020-03-26 16:36:22.609 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.getBlogJoinTag    : <====      Total: 2
+2020-03-26 16:36:22.609 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.getBlogJoinTag    : ====>  Preparing: select id,title from t_blog where id in (select blogsId from t_blog_tags where tagsId = ?) 
+2020-03-26 16:36:22.609 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.getBlogJoinTag    : ====> Parameters: 6(Long)
+2020-03-26 16:36:22.610 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.getBlogJoinTag    : <====      Total: 2
+2020-03-26 16:36:22.610 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.TagDao.indexTag           : <==      Total: 2
+2020-03-26 16:36:22.611 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.getRecommendBlog  : ==>  Preparing: select id, title from t_blog where recommend=1 order by updateTime desc limit 6 
+2020-03-26 16:36:22.611 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.getRecommendBlog  : ==> Parameters: 
+2020-03-26 16:36:22.611 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.getRecommendBlog  : <==      Total: 2
+2020-03-26 16:36:22.612  INFO 3764 --- [http-nio-8080-exec-9] com.zby.aspect.LogAspect                 : after.....
+2020-03-26 16:36:22.612  INFO 3764 --- [http-nio-8080-exec-9] com.zby.aspect.LogAspect                 : Result : {}index
+2020-03-26 16:36:43.757  INFO 3764 --- [http-nio-8080-exec-4] com.zby.aspect.LogAspect                 : Request:{url='http://localhost:8080/footer/latestBlog', ip='0:0:0:0:0:0:0:1', classMethod='com.zby.controller.IndexController.latestBlogs', args=[{}], uri='/footer/latestBlog'}
+2020-03-26 16:36:43.758 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.BlogDao.getLatestBlogs    : ==>  Preparing: select id, title from t_blog order by updateTime desc limit 4 
+2020-03-26 16:36:43.758 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.BlogDao.getLatestBlogs    : ==> Parameters: 
+2020-03-26 16:36:43.759 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.BlogDao.getLatestBlogs    : <==      Total: 2
+2020-03-26 16:36:43.760  INFO 3764 --- [http-nio-8080-exec-4] com.zby.aspect.LogAspect                 : after.....
+2020-03-26 16:36:43.760  INFO 3764 --- [http-nio-8080-exec-4] com.zby.aspect.LogAspect                 : Result : {}common/_fragments :: latestBlog
+2020-03-26 16:36:47.630  INFO 3764 --- [http-nio-8080-exec-6] com.zby.aspect.LogAspect                 : Request:{url='http://localhost:8080/blog/36', ip='0:0:0:0:0:0:0:1', classMethod='com.zby.controller.IndexController.blog', args=[36, {}], uri='/blog/36'}
+2020-03-26 16:36:47.631 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.getBlogById       : ==>  Preparing: select * from t_blog where id=? 
+2020-03-26 16:36:47.631 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.getBlogById       : ==> Parameters: 36(Long)
+2020-03-26 16:36:47.632 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.UserDao.getUserById       : ====>  Preparing: select * from t_user where id=? 
+2020-03-26 16:36:47.632 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.UserDao.getUserById       : ====> Parameters: 1(Long)
+2020-03-26 16:36:47.633 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.UserDao.getUserById       : <====      Total: 1
+2020-03-26 16:36:47.633 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.TypeDao.getTypeById       : ====>  Preparing: select * from t_type where id=? 
+2020-03-26 16:36:47.633 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.TypeDao.getTypeById       : ====> Parameters: 18(Long)
+2020-03-26 16:36:47.633 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.TypeDao.getTypeById       : <====      Total: 1
+2020-03-26 16:36:47.634 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.TagDao.findTagByBlogId    : ====>  Preparing: select * from t_tag where id in (select tagsId from t_blog_tags where blogsId = ?) 
+2020-03-26 16:36:47.634 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.TagDao.findTagByBlogId    : ====> Parameters: 36(Long)
+2020-03-26 16:36:47.634 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.TagDao.findTagByBlogId    : <====      Total: 2
+2020-03-26 16:36:47.634 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.getBlogById       : <==      Total: 1
+2020-03-26 16:36:47.636 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.updateViews       : ==>  Preparing: update t_blog set views=views+1 where id=? 
+2020-03-26 16:36:47.636 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.updateViews       : ==> Parameters: 36(Long)
+2020-03-26 16:36:47.636 DEBUG 3764 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.updateViews       : <==    Updates: 1
+2020-03-26 16:36:47.637  INFO 3764 --- [http-nio-8080-exec-6] com.zby.aspect.LogAspect                 : after.....
+2020-03-26 16:36:47.637  INFO 3764 --- [http-nio-8080-exec-6] com.zby.aspect.LogAspect                 : Result : {}blog
+2020-03-26 16:37:08.787  INFO 3764 --- [http-nio-8080-exec-3] com.zby.aspect.LogAspect                 : Request:{url='http://localhost:8080/footer/latestBlog', ip='0:0:0:0:0:0:0:1', classMethod='com.zby.controller.IndexController.latestBlogs', args=[{}], uri='/footer/latestBlog'}
+2020-03-26 16:37:08.788 DEBUG 3764 --- [http-nio-8080-exec-3] com.zby.mapper.BlogDao.getLatestBlogs    : ==>  Preparing: select id, title from t_blog order by updateTime desc limit 4 
+2020-03-26 16:37:08.788 DEBUG 3764 --- [http-nio-8080-exec-3] com.zby.mapper.BlogDao.getLatestBlogs    : ==> Parameters: 
+2020-03-26 16:37:08.789 DEBUG 3764 --- [http-nio-8080-exec-3] com.zby.mapper.BlogDao.getLatestBlogs    : <==      Total: 2
+2020-03-26 16:37:08.789  INFO 3764 --- [http-nio-8080-exec-3] com.zby.aspect.LogAspect                 : after.....
+2020-03-26 16:37:08.789  INFO 3764 --- [http-nio-8080-exec-3] com.zby.aspect.LogAspect                 : Result : {}common/_fragments :: latestBlog
+2020-03-26 16:37:09.753  INFO 3764 --- [http-nio-8080-exec-10] com.zby.aspect.LogAspect                 : Request:{url='http://localhost:8080/comments/36', ip='0:0:0:0:0:0:0:1', classMethod='com.zby.controller.CommentController.comments', args=[36, {}], uri='/comments/36'}
+2020-03-26 16:37:09.753 DEBUG 3764 --- [http-nio-8080-exec-10] c.z.m.CommentDao.getCommentByIdNoFather  : ==>  Preparing: select * from t_comment where blogId=? and parentCommentId = -1 order by createTime desc 
+2020-03-26 16:37:09.753 DEBUG 3764 --- [http-nio-8080-exec-10] c.z.m.CommentDao.getCommentByIdNoFather  : ==> Parameters: 36(Long)
+2020-03-26 16:37:09.754 DEBUG 3764 --- [http-nio-8080-exec-10] c.z.m.CommentDao.getCommentByIdNoFather  : <==      Total: 0
+2020-03-26 16:37:09.754  INFO 3764 --- [http-nio-8080-exec-10] com.zby.aspect.LogAspect                 : after.....
+2020-03-26 16:37:09.754  INFO 3764 --- [http-nio-8080-exec-10] com.zby.aspect.LogAspect                 : Result : {}blog :: commentList
+2020-03-26 16:37:52.959 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TypeDao.getAdminType      : ==>  Preparing: select * from t_type 
+2020-03-26 16:37:52.960 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TypeDao.getAdminType      : ==> Parameters: 
+2020-03-26 16:37:52.961 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TypeDao.getAdminType      : <==      Total: 1
+2020-03-26 16:37:52.962 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TagDao.getAdminTag        : ==>  Preparing: select * from t_tag 
+2020-03-26 16:37:52.962 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TagDao.getAdminTag        : ==> Parameters: 
+2020-03-26 16:37:52.963 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TagDao.getAdminTag        : <==      Total: 2
+2020-03-26 16:37:52.964 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.BlogDao.getBlogById       : ==>  Preparing: select * from t_blog where id=? 
+2020-03-26 16:37:52.964 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.BlogDao.getBlogById       : ==> Parameters: 36(Long)
+2020-03-26 16:37:52.965 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.UserDao.getUserById       : ====>  Preparing: select * from t_user where id=? 
+2020-03-26 16:37:52.965 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.UserDao.getUserById       : ====> Parameters: 1(Long)
+2020-03-26 16:37:52.965 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.UserDao.getUserById       : <====      Total: 1
+2020-03-26 16:37:52.965 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TypeDao.getTypeById       : ====>  Preparing: select * from t_type where id=? 
+2020-03-26 16:37:52.965 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TypeDao.getTypeById       : ====> Parameters: 18(Long)
+2020-03-26 16:37:52.966 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TypeDao.getTypeById       : <====      Total: 1
+2020-03-26 16:37:52.966 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TagDao.findTagByBlogId    : ====>  Preparing: select * from t_tag where id in (select tagsId from t_blog_tags where blogsId = ?) 
+2020-03-26 16:37:52.966 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TagDao.findTagByBlogId    : ====> Parameters: 36(Long)
+2020-03-26 16:37:52.966 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.TagDao.findTagByBlogId    : <====      Total: 2
+2020-03-26 16:37:52.966 DEBUG 3764 --- [http-nio-8080-exec-8] com.zby.mapper.BlogDao.getBlogById       : <==      Total: 1
+2020-03-26 16:53:36.475 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.TagDao.getById            : ==>  Preparing: select * from t_tag where id=? 
+2020-03-26 16:53:36.476 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.TagDao.getById            : ==> Parameters: 7(Long)
+2020-03-26 16:53:36.477 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.TagDao.getById            : <==      Total: 1
+2020-03-26 16:53:36.478 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.TagDao.getById            : ==>  Preparing: select * from t_tag where id=? 
+2020-03-26 16:53:36.478 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.TagDao.getById            : ==> Parameters: 6(Long)
+2020-03-26 16:53:36.478 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.TagDao.getById            : <==      Total: 1
+2020-03-26 16:53:36.479 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.deleteBlogAndTag  : ==>  Preparing: delete from t_blog_tags where blogsId = ? 
+2020-03-26 16:53:36.480 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.deleteBlogAndTag  : ==> Parameters: 36(Long)
+2020-03-26 16:53:36.481 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.deleteBlogAndTag  : <==    Updates: 2
+2020-03-26 16:53:36.481 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.saveBlogAndTag    : ==>  Preparing: insert into t_blog_tags(blogsId,tagsId) values (?,?) 
+2020-03-26 16:53:36.482 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.saveBlogAndTag    : ==> Parameters: 36(Long), 7(Long)
+2020-03-26 16:53:36.482 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.saveBlogAndTag    : <==    Updates: 1
+2020-03-26 16:53:36.482 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.saveBlogAndTag    : ==>  Preparing: insert into t_blog_tags(blogsId,tagsId) values (?,?) 
+2020-03-26 16:53:36.482 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.saveBlogAndTag    : ==> Parameters: 36(Long), 6(Long)
+2020-03-26 16:53:36.483 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.saveBlogAndTag    : <==    Updates: 1
+2020-03-26 16:53:36.483 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.updateBlog        : ==>  Preparing: update t_blog set title=?,content=?,firstPicture=?,flag=?,appreciation=?,shareStatement=?,commentable=?,published=?,recommend=?,updateTime=?,typeId=?,description=? where id = ? 
+2020-03-26 16:53:36.484 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.updateBlog        : ==> Parameters: 平衡二叉树(String), &emsp;左子树和右子树的高度差的绝对值不超过1.
+![平衡二叉树与二差排序树的差别](/pictures/avl2.png "平衡二叉树与二差排序树的差别")
+
+#### 转化过程
+![变化过程1](/pictures/avl3.png "变化过程1")
+![变化过程2](/pictures/avl4.png "变化过程2")
+![变化过程3](/pictures/avl5.png "变化过程3")
+#### 代码实现
+
+    private void rightRotate() {
+        //1 创建一个新的节点，值等于当前节点的值
+        Node newRight = new Node(value);
+        //2 把新节点的右子树设置成当前节点的右子树
+        newRight.right=right;
+        //3 把新节点的左子树设置为当前节点的左子树右子树
+        newRight.left=left.right;
+        //4 把当前节点的值设置为左子节点的值
+        value=left.value;
+        //5 把当前节点的左子树设置左子树的左子树
+        left=left.left;
+        //6 把当前节点的右子树设置为新节点
+        right=newRight;
+
+    }
+```(String), https://unsplash.it/800/450?image=1002(String), 原创(String), true(Boolean), true(Boolean), true(Boolean), true(Boolean), true(Boolean), 2020-03-26 16:53:36.483(Timestamp), 18(Long), (String), 36(Long)
+2020-03-26 16:53:36.486 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.updateBlog        : <==    Updates: 1
+2020-03-26 16:53:36.490 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.queryBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM t_blog 
+2020-03-26 16:53:36.490 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.queryBlog_COUNT   : ==> Parameters: 
+2020-03-26 16:53:36.490 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.queryBlog_COUNT   : <==      Total: 1
+2020-03-26 16:53:36.490 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.queryBlog         : ==>  Preparing: select id,title,updateTime,recommend,published,typeId from t_blog LIMIT ? 
+2020-03-26 16:53:36.490 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.queryBlog         : ==> Parameters: 4(Integer)
+2020-03-26 16:53:36.491 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getTypeById       : ====>  Preparing: select * from t_type where id=? 
+2020-03-26 16:53:36.491 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getTypeById       : ====> Parameters: 18(Long)
+2020-03-26 16:53:36.493 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getTypeById       : <====      Total: 1
+2020-03-26 16:53:36.493 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.queryBlog         : <==      Total: 2
+2020-03-26 16:53:36.494 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getAdminType      : ==>  Preparing: select * from t_type 
+2020-03-26 16:53:36.494 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getAdminType      : ==> Parameters: 
+2020-03-26 16:53:36.495 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getAdminType      : <==      Total: 1
+2020-03-26 16:53:36.496 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.TagDao.getAdminTag        : ==>  Preparing: select * from t_tag 
+2020-03-26 16:53:36.496 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.TagDao.getAdminTag        : ==> Parameters: 
+2020-03-26 16:53:36.496 DEBUG 3764 --- [http-nio-8080-exec-9] com.zby.mapper.TagDao.getAdminTag        : <==      Total: 2
+2020-03-26 16:54:04.467  INFO 3764 --- [http-nio-8080-exec-4] com.zby.aspect.LogAspect                 : Request:{url='http://localhost:8080/blog/36', ip='0:0:0:0:0:0:0:1', classMethod='com.zby.controller.IndexController.blog', args=[36, {}], uri='/blog/36'}
+2020-03-26 16:54:04.468 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.BlogDao.getBlogById       : ==>  Preparing: select * from t_blog where id=? 
+2020-03-26 16:54:04.468 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.BlogDao.getBlogById       : ==> Parameters: 36(Long)
+2020-03-26 16:54:04.469 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.UserDao.getUserById       : ====>  Preparing: select * from t_user where id=? 
+2020-03-26 16:54:04.469 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.UserDao.getUserById       : ====> Parameters: 1(Long)
+2020-03-26 16:54:04.471 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.UserDao.getUserById       : <====      Total: 1
+2020-03-26 16:54:04.472 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.TypeDao.getTypeById       : ====>  Preparing: select * from t_type where id=? 
+2020-03-26 16:54:04.472 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.TypeDao.getTypeById       : ====> Parameters: 18(Long)
+2020-03-26 16:54:04.472 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.TypeDao.getTypeById       : <====      Total: 1
+2020-03-26 16:54:04.472 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.TagDao.findTagByBlogId    : ====>  Preparing: select * from t_tag where id in (select tagsId from t_blog_tags where blogsId = ?) 
+2020-03-26 16:54:04.472 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.TagDao.findTagByBlogId    : ====> Parameters: 36(Long)
+2020-03-26 16:54:04.473 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.TagDao.findTagByBlogId    : <====      Total: 2
+2020-03-26 16:54:04.473 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.BlogDao.getBlogById       : <==      Total: 1
+2020-03-26 16:54:04.474 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.BlogDao.updateViews       : ==>  Preparing: update t_blog set views=views+1 where id=? 
+2020-03-26 16:54:04.474 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.BlogDao.updateViews       : ==> Parameters: 36(Long)
+2020-03-26 16:54:04.475 DEBUG 3764 --- [http-nio-8080-exec-4] com.zby.mapper.BlogDao.updateViews       : <==    Updates: 1
+2020-03-26 16:54:04.476  INFO 3764 --- [http-nio-8080-exec-4] com.zby.aspect.LogAspect                 : after.....
+2020-03-26 16:54:04.476  INFO 3764 --- [http-nio-8080-exec-4] com.zby.aspect.LogAspect                 : Result : {}blog
+2020-03-26 16:54:25.643  INFO 3764 --- [http-nio-8080-exec-1] com.zby.aspect.LogAspect                 : Request:{url='http://localhost:8080/footer/latestBlog', ip='0:0:0:0:0:0:0:1', classMethod='com.zby.controller.IndexController.latestBlogs', args=[{}], uri='/footer/latestBlog'}
+2020-03-26 16:54:25.643 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getLatestBlogs    : ==>  Preparing: select id, title from t_blog order by updateTime desc limit 4 
+2020-03-26 16:54:25.644 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getLatestBlogs    : ==> Parameters: 
+2020-03-26 16:54:25.644 DEBUG 3764 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getLatestBlogs    : <==      Total: 2
+2020-03-26 16:54:25.645  INFO 3764 --- [http-nio-8080-exec-1] com.zby.aspect.LogAspect                 : after.....
+2020-03-26 16:54:25.645  INFO 3764 --- [http-nio-8080-exec-1] com.zby.aspect.LogAspect                 : Result : {}common/_fragments :: latestBlog
+2020-03-26 16:54:25.753  INFO 3764 --- [http-nio-8080-exec-10] com.zby.aspect.LogAspect                 : Request:{url='http://localhost:8080/comments/36', ip='0:0:0:0:0:0:0:1', classMethod='com.zby.controller.CommentController.comments', args=[36, {}], uri='/comments/36'}
+2020-03-26 16:54:25.754 DEBUG 3764 --- [http-nio-8080-exec-10] c.z.m.CommentDao.getCommentByIdNoFather  : ==>  Preparing: select * from t_comment where blogId=? and parentCommentId = -1 order by createTime desc 
+2020-03-26 16:54:25.754 DEBUG 3764 --- [http-nio-8080-exec-10] c.z.m.CommentDao.getCommentByIdNoFather  : ==> Parameters: 36(Long)
+2020-03-26 16:54:25.756 DEBUG 3764 --- [http-nio-8080-exec-10] c.z.m.CommentDao.getCommentByIdNoFather  : <==      Total: 0
+2020-03-26 16:54:25.757  INFO 3764 --- [http-nio-8080-exec-10] com.zby.aspect.LogAspect                 : after.....
+2020-03-26 16:54:25.757  INFO 3764 --- [http-nio-8080-exec-10] com.zby.aspect.LogAspect                 : Result : {}blog :: commentList
+2020-03-26 16:54:58.451 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.TypeDao.getAdminType      : ==>  Preparing: select * from t_type 
+2020-03-26 16:54:58.451 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.TypeDao.getAdminType      : ==> Parameters: 
+2020-03-26 16:54:58.452 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.TypeDao.getAdminType      : <==      Total: 1
+2020-03-26 16:54:58.453 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.TagDao.getAdminTag        : ==>  Preparing: select * from t_tag 
+2020-03-26 16:54:58.453 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.TagDao.getAdminTag        : ==> Parameters: 
+2020-03-26 16:54:58.454 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.TagDao.getAdminTag        : <==      Total: 2
+2020-03-26 16:54:58.455 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.getBlogById       : ==>  Preparing: select * from t_blog where id=? 
+2020-03-26 16:54:58.455 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.getBlogById       : ==> Parameters: 36(Long)
+2020-03-26 16:54:58.456 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.UserDao.getUserById       : ====>  Preparing: select * from t_user where id=? 
+2020-03-26 16:54:58.456 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.UserDao.getUserById       : ====> Parameters: 1(Long)
+2020-03-26 16:54:58.457 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.UserDao.getUserById       : <====      Total: 1
+2020-03-26 16:54:58.457 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.TypeDao.getTypeById       : ====>  Preparing: select * from t_type where id=? 
+2020-03-26 16:54:58.457 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.TypeDao.getTypeById       : ====> Parameters: 18(Long)
+2020-03-26 16:54:58.457 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.TypeDao.getTypeById       : <====      Total: 1
+2020-03-26 16:54:58.458 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.TagDao.findTagByBlogId    : ====>  Preparing: select * from t_tag where id in (select tagsId from t_blog_tags where blogsId = ?) 
+2020-03-26 16:54:58.458 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.TagDao.findTagByBlogId    : ====> Parameters: 36(Long)
+2020-03-26 16:54:58.458 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.TagDao.findTagByBlogId    : <====      Total: 2
+2020-03-26 16:54:58.458 DEBUG 3764 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.getBlogById       : <==      Total: 1
+2020-03-26 16:55:17.374  INFO 15372 --- [restartedMain] com.zby.ByblogApplication                : Starting ByblogApplication on SC-201811071851 with PID 15372 (D:\byblog\target\classes started by Administrator in D:\byblog)
+2020-03-26 16:55:17.375 DEBUG 15372 --- [restartedMain] com.zby.ByblogApplication                : Running with Spring Boot v2.1.2.RELEASE, Spring v5.1.4.RELEASE
+2020-03-26 16:55:17.375  INFO 15372 --- [restartedMain] com.zby.ByblogApplication                : The following profiles are active: dev
+2020-03-26 16:55:17.394  INFO 15372 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-26 16:55:17.395  INFO 15372 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-26 16:55:18.156  INFO 15372 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-26 16:55:18.168  INFO 15372 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-26 16:55:18.168  INFO 15372 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2020-03-26 16:55:18.172  INFO 15372 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk-12.0.2\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;G:\app\Administrator\product\11.2.0\dbhome_1\bin;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Windows\System32;C:\Program Files\MySQL\MySQL Server 5.5\bin;D:\JDBC资料\resources\MySql Connector Java 5.1.23\mysql-connector-java-5.1.23-bin.jar;C:\Program Files\Java\jdk-12.0.2\bin;D:\apache-maven-3.5.2\bin;C:\Program Files\VisualSVN Server\bin;C:\Program Files\TortoiseSVN\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2019.2.1\bin;;.]
+2020-03-26 16:55:18.216  INFO 15372 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-26 16:55:18.216  INFO 15372 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 821 ms
+2020-03-26 16:55:18.648  INFO 15372 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-26 16:55:18.761  INFO 15372 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-26 16:55:18.964  INFO 15372 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-26 16:55:18.999  INFO 15372 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-26 16:55:19.001  INFO 15372 --- [restartedMain] com.zby.ByblogApplication                : Started ByblogApplication in 1.822 seconds (JVM running for 2.319)
+2020-03-26 16:55:22.050  INFO 15372 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-26 16:55:22.051  INFO 15372 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-26 16:55:22.057  INFO 15372 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-03-26 16:55:22.232  WARN 15372 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [165] milliseconds.
+2020-03-26 16:55:46.549  INFO 15372 --- [http-nio-8080-exec-6] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-03-26 16:55:46.593 DEBUG 15372 --- [http-nio-8080-exec-6] c.z.m.UserDao.findByUsernameAndPassword  : ==>  Preparing: select * from t_user where username=? and password=? 
+2020-03-26 16:55:46.603 DEBUG 15372 --- [http-nio-8080-exec-6] c.z.m.UserDao.findByUsernameAndPassword  : ==> Parameters: zby(String), 310dcbbf4cce62f762a2aaa148d556bd(String)
+2020-03-26 16:55:46.613 DEBUG 15372 --- [http-nio-8080-exec-6] c.z.m.UserDao.findByUsernameAndPassword  : <==      Total: 1
+2020-03-26 16:56:03.820 DEBUG 15372 --- [http-nio-8080-exec-8] com.zby.mapper.BlogDao.queryBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM t_blog 
+2020-03-26 16:56:03.820 DEBUG 15372 --- [http-nio-8080-exec-8] com.zby.mapper.BlogDao.queryBlog_COUNT   : ==> Parameters: 
+2020-03-26 16:56:03.822 DEBUG 15372 --- [http-nio-8080-exec-8] com.zby.mapper.BlogDao.queryBlog_COUNT   : <==      Total: 1
+2020-03-26 16:56:03.822 DEBUG 15372 --- [http-nio-8080-exec-8] com.zby.mapper.BlogDao.queryBlog         : ==>  Preparing: select id,title,updateTime,recommend,published,typeId from t_blog LIMIT ? 
+2020-03-26 16:56:03.823 DEBUG 15372 --- [http-nio-8080-exec-8] com.zby.mapper.BlogDao.queryBlog         : ==> Parameters: 4(Integer)
+2020-03-26 16:56:03.824 DEBUG 15372 --- [http-nio-8080-exec-8] com.zby.mapper.TypeDao.getTypeById       : ====>  Preparing: select * from t_type where id=? 
+2020-03-26 16:56:03.824 DEBUG 15372 --- [http-nio-8080-exec-8] com.zby.mapper.TypeDao.getTypeById       : ====> Parameters: 18(Long)
+2020-03-26 16:56:03.826 DEBUG 15372 --- [http-nio-8080-exec-8] com.zby.mapper.TypeDao.getTypeById       : <====      Total: 1
+2020-03-26 16:56:03.826 DEBUG 15372 --- [http-nio-8080-exec-8] com.zby.mapper.BlogDao.queryBlog         : <==      Total: 2
+2020-03-26 16:56:03.831 DEBUG 15372 --- [http-nio-8080-exec-8] com.zby.mapper.TypeDao.getAdminType      : ==>  Preparing: select * from t_type 
+2020-03-26 16:56:03.831 DEBUG 15372 --- [http-nio-8080-exec-8] com.zby.mapper.TypeDao.getAdminType      : ==> Parameters: 
+2020-03-26 16:56:03.833 DEBUG 15372 --- [http-nio-8080-exec-8] com.zby.mapper.TypeDao.getAdminType      : <==      Total: 1
+2020-03-26 16:56:03.836 DEBUG 15372 --- [http-nio-8080-exec-8] com.zby.mapper.TagDao.getAdminTag        : ==>  Preparing: select * from t_tag 
+2020-03-26 16:56:03.837 DEBUG 15372 --- [http-nio-8080-exec-8] com.zby.mapper.TagDao.getAdminTag        : ==> Parameters: 
+2020-03-26 16:56:03.837 DEBUG 15372 --- [http-nio-8080-exec-8] com.zby.mapper.TagDao.getAdminTag        : <==      Total: 2
+2020-03-26 16:56:40.965 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getAdminType      : ==>  Preparing: select * from t_type 
+2020-03-26 16:56:40.966 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getAdminType      : ==> Parameters: 
+2020-03-26 16:56:40.967 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getAdminType      : <==      Total: 1
+2020-03-26 16:56:40.970 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.TagDao.getAdminTag        : ==>  Preparing: select * from t_tag 
+2020-03-26 16:56:40.971 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.TagDao.getAdminTag        : ==> Parameters: 
+2020-03-26 16:56:40.972 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.TagDao.getAdminTag        : <==      Total: 2
+2020-03-26 16:56:40.974 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.getBlogById       : ==>  Preparing: select * from t_blog where id=? 
+2020-03-26 16:56:40.974 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.getBlogById       : ==> Parameters: 36(Long)
+2020-03-26 16:56:40.976 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.UserDao.getUserById       : ====>  Preparing: select * from t_user where id=? 
+2020-03-26 16:56:40.976 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.UserDao.getUserById       : ====> Parameters: 1(Long)
+2020-03-26 16:56:40.977 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.UserDao.getUserById       : <====      Total: 1
+2020-03-26 16:56:40.978 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getTypeById       : ====>  Preparing: select * from t_type where id=? 
+2020-03-26 16:56:40.978 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getTypeById       : ====> Parameters: 18(Long)
+2020-03-26 16:56:40.978 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getTypeById       : <====      Total: 1
+2020-03-26 16:56:40.979 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.TagDao.findTagByBlogId    : ====>  Preparing: select * from t_tag where id in (select tagsId from t_blog_tags where blogsId = ?) 
+2020-03-26 16:56:40.979 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.TagDao.findTagByBlogId    : ====> Parameters: 36(Long)
+2020-03-26 16:56:40.980 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.TagDao.findTagByBlogId    : <====      Total: 2
+2020-03-26 16:56:40.980 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.getBlogById       : <==      Total: 1
+2020-03-26 17:03:50.374 DEBUG 15372 --- [http-nio-8080-exec-1] com.zby.mapper.TagDao.getById            : ==>  Preparing: select * from t_tag where id=? 
+2020-03-26 17:03:50.374 DEBUG 15372 --- [http-nio-8080-exec-1] com.zby.mapper.TagDao.getById            : ==> Parameters: 7(Long)
+2020-03-26 17:03:50.375 DEBUG 15372 --- [http-nio-8080-exec-1] com.zby.mapper.TagDao.getById            : <==      Total: 1
+2020-03-26 17:03:50.376 DEBUG 15372 --- [http-nio-8080-exec-1] com.zby.mapper.TagDao.getById            : ==>  Preparing: select * from t_tag where id=? 
+2020-03-26 17:03:50.376 DEBUG 15372 --- [http-nio-8080-exec-1] com.zby.mapper.TagDao.getById            : ==> Parameters: 6(Long)
+2020-03-26 17:03:50.377 DEBUG 15372 --- [http-nio-8080-exec-1] com.zby.mapper.TagDao.getById            : <==      Total: 1
+2020-03-26 17:03:50.379 DEBUG 15372 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.deleteBlogAndTag  : ==>  Preparing: delete from t_blog_tags where blogsId = ? 
+2020-03-26 17:03:50.379 DEBUG 15372 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.deleteBlogAndTag  : ==> Parameters: 36(Long)
+2020-03-26 17:03:50.379 DEBUG 15372 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.deleteBlogAndTag  : <==    Updates: 2
+2020-03-26 17:03:50.380 DEBUG 15372 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.saveBlogAndTag    : ==>  Preparing: insert into t_blog_tags(blogsId,tagsId) values (?,?) 
+2020-03-26 17:03:50.380 DEBUG 15372 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.saveBlogAndTag    : ==> Parameters: 36(Long), 7(Long)
+2020-03-26 17:03:50.381 DEBUG 15372 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.saveBlogAndTag    : <==    Updates: 1
+2020-03-26 17:03:50.381 DEBUG 15372 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.saveBlogAndTag    : ==>  Preparing: insert into t_blog_tags(blogsId,tagsId) values (?,?) 
+2020-03-26 17:03:50.381 DEBUG 15372 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.saveBlogAndTag    : ==> Parameters: 36(Long), 6(Long)
+2020-03-26 17:03:50.382 DEBUG 15372 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.saveBlogAndTag    : <==    Updates: 1
+2020-03-26 17:03:50.384 DEBUG 15372 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.updateBlog        : ==>  Preparing: update t_blog set title=?,content=?,firstPicture=?,flag=?,appreciation=?,shareStatement=?,commentable=?,published=?,recommend=?,updateTime=?,typeId=?,description=? where id = ? 
+2020-03-26 17:03:50.384 DEBUG 15372 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.updateBlog        : ==> Parameters: 平衡二叉树(String), &emsp;左子树和右子树的高度差的绝对值不超过1.
+![平衡二叉树与二差排序树的差别](/pictures/avl2.png "平衡二叉树与二差排序树的差别")
+
+#### 转化过程
+![变化过程1](/pictures/avl3.png "变化过程1")
+![变化过程2](/pictures/avl4.png "变化过程2")
+![变化过程3](/pictures/avl5.png "变化过程3")
+#### 代码实现
+
+```java
+ public void rightRotate() {
+        //1 创建一个新的节点，值等于当前节点的值
+        Node newRight = new Node(value);
+        //2 把新节点的右子树设置成当前节点的右子树
+        newRight.right=right;
+        //3 把新节点的左子树设置为当前节点的左子树右子树
+        newRight.left=left.right;
+        //4 把当前节点的值设置为左子节点的值
+        value=left.value;
+        //5 把当前节点的左子树设置左子树的左子树
+        left=left.left;
+        //6 把当前节点的右子树设置为新节点
+        right=newRight;
+
+    }
+```
+
+#### 第二种情况
+![0](/pictures/avl6.png "0")
+先将左子树进行左旋转，再进行上面的步骤
+##### 1
+![1](/pictures/avl7.png "1")
+##### 2
+![2](/pictures/avl8.png "2")
+##### 3
+![3](/pictures/avl9.png "3")(String), https://unsplash.it/800/450?image=1002(String), 原创(String), true(Boolean), true(Boolean), true(Boolean), true(Boolean), true(Boolean), 2020-03-26 17:03:50.383(Timestamp), 18(Long), (String), 36(Long)
+2020-03-26 17:03:50.385 DEBUG 15372 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.updateBlog        : <==    Updates: 1
+2020-03-26 17:03:50.398 DEBUG 15372 --- [http-nio-8080-exec-4] com.zby.mapper.BlogDao.queryBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM t_blog 
+2020-03-26 17:03:50.398 DEBUG 15372 --- [http-nio-8080-exec-4] com.zby.mapper.BlogDao.queryBlog_COUNT   : ==> Parameters: 
+2020-03-26 17:03:50.399 DEBUG 15372 --- [http-nio-8080-exec-4] com.zby.mapper.BlogDao.queryBlog_COUNT   : <==      Total: 1
+2020-03-26 17:03:50.400 DEBUG 15372 --- [http-nio-8080-exec-4] com.zby.mapper.BlogDao.queryBlog         : ==>  Preparing: select id,title,updateTime,recommend,published,typeId from t_blog LIMIT ? 
+2020-03-26 17:03:50.400 DEBUG 15372 --- [http-nio-8080-exec-4] com.zby.mapper.BlogDao.queryBlog         : ==> Parameters: 4(Integer)
+2020-03-26 17:03:50.401 DEBUG 15372 --- [http-nio-8080-exec-4] com.zby.mapper.TypeDao.getTypeById       : ====>  Preparing: select * from t_type where id=? 
+2020-03-26 17:03:50.401 DEBUG 15372 --- [http-nio-8080-exec-4] com.zby.mapper.TypeDao.getTypeById       : ====> Parameters: 18(Long)
+2020-03-26 17:03:50.402 DEBUG 15372 --- [http-nio-8080-exec-4] com.zby.mapper.TypeDao.getTypeById       : <====      Total: 1
+2020-03-26 17:03:50.403 DEBUG 15372 --- [http-nio-8080-exec-4] com.zby.mapper.BlogDao.queryBlog         : <==      Total: 2
+2020-03-26 17:03:50.405 DEBUG 15372 --- [http-nio-8080-exec-4] com.zby.mapper.TypeDao.getAdminType      : ==>  Preparing: select * from t_type 
+2020-03-26 17:03:50.406 DEBUG 15372 --- [http-nio-8080-exec-4] com.zby.mapper.TypeDao.getAdminType      : ==> Parameters: 
+2020-03-26 17:03:50.406 DEBUG 15372 --- [http-nio-8080-exec-4] com.zby.mapper.TypeDao.getAdminType      : <==      Total: 1
+2020-03-26 17:03:50.408 DEBUG 15372 --- [http-nio-8080-exec-4] com.zby.mapper.TagDao.getAdminTag        : ==>  Preparing: select * from t_tag 
+2020-03-26 17:03:50.408 DEBUG 15372 --- [http-nio-8080-exec-4] com.zby.mapper.TagDao.getAdminTag        : ==> Parameters: 
+2020-03-26 17:03:50.409 DEBUG 15372 --- [http-nio-8080-exec-4] com.zby.mapper.TagDao.getAdminTag        : <==      Total: 2
+2020-03-26 17:04:17.979  INFO 15372 --- [http-nio-8080-exec-2] com.zby.aspect.LogAspect                 : Request:{url='http://localhost:8080/blog/36', ip='0:0:0:0:0:0:0:1', classMethod='com.zby.controller.IndexController.blog', args=[36, {}], uri='/blog/36'}
+2020-03-26 17:04:17.983 DEBUG 15372 --- [http-nio-8080-exec-2] com.zby.mapper.BlogDao.getBlogById       : ==>  Preparing: select * from t_blog where id=? 
+2020-03-26 17:04:17.984 DEBUG 15372 --- [http-nio-8080-exec-2] com.zby.mapper.BlogDao.getBlogById       : ==> Parameters: 36(Long)
+2020-03-26 17:04:17.986 DEBUG 15372 --- [http-nio-8080-exec-2] com.zby.mapper.UserDao.getUserById       : ====>  Preparing: select * from t_user where id=? 
+2020-03-26 17:04:17.986 DEBUG 15372 --- [http-nio-8080-exec-2] com.zby.mapper.UserDao.getUserById       : ====> Parameters: 1(Long)
+2020-03-26 17:04:17.987 DEBUG 15372 --- [http-nio-8080-exec-2] com.zby.mapper.UserDao.getUserById       : <====      Total: 1
+2020-03-26 17:04:17.987 DEBUG 15372 --- [http-nio-8080-exec-2] com.zby.mapper.TypeDao.getTypeById       : ====>  Preparing: select * from t_type where id=? 
+2020-03-26 17:04:17.987 DEBUG 15372 --- [http-nio-8080-exec-2] com.zby.mapper.TypeDao.getTypeById       : ====> Parameters: 18(Long)
+2020-03-26 17:04:17.989 DEBUG 15372 --- [http-nio-8080-exec-2] com.zby.mapper.TypeDao.getTypeById       : <====      Total: 1
+2020-03-26 17:04:17.989 DEBUG 15372 --- [http-nio-8080-exec-2] com.zby.mapper.TagDao.findTagByBlogId    : ====>  Preparing: select * from t_tag where id in (select tagsId from t_blog_tags where blogsId = ?) 
+2020-03-26 17:04:17.989 DEBUG 15372 --- [http-nio-8080-exec-2] com.zby.mapper.TagDao.findTagByBlogId    : ====> Parameters: 36(Long)
+2020-03-26 17:04:17.990 DEBUG 15372 --- [http-nio-8080-exec-2] com.zby.mapper.TagDao.findTagByBlogId    : <====      Total: 2
+2020-03-26 17:04:17.991 DEBUG 15372 --- [http-nio-8080-exec-2] com.zby.mapper.BlogDao.getBlogById       : <==      Total: 1
+2020-03-26 17:04:18.011 DEBUG 15372 --- [http-nio-8080-exec-2] com.zby.mapper.BlogDao.updateViews       : ==>  Preparing: update t_blog set views=views+1 where id=? 
+2020-03-26 17:04:18.011 DEBUG 15372 --- [http-nio-8080-exec-2] com.zby.mapper.BlogDao.updateViews       : ==> Parameters: 36(Long)
+2020-03-26 17:04:18.012 DEBUG 15372 --- [http-nio-8080-exec-2] com.zby.mapper.BlogDao.updateViews       : <==    Updates: 1
+2020-03-26 17:04:18.014  INFO 15372 --- [http-nio-8080-exec-2] com.zby.aspect.LogAspect                 : after.....
+2020-03-26 17:04:18.014  INFO 15372 --- [http-nio-8080-exec-2] com.zby.aspect.LogAspect                 : Result : {}blog
+2020-03-26 17:04:39.140  INFO 15372 --- [http-nio-8080-exec-1] com.zby.aspect.LogAspect                 : Request:{url='http://localhost:8080/footer/latestBlog', ip='0:0:0:0:0:0:0:1', classMethod='com.zby.controller.IndexController.latestBlogs', args=[{}], uri='/footer/latestBlog'}
+2020-03-26 17:04:39.142 DEBUG 15372 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getLatestBlogs    : ==>  Preparing: select id, title from t_blog order by updateTime desc limit 4 
+2020-03-26 17:04:39.142 DEBUG 15372 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getLatestBlogs    : ==> Parameters: 
+2020-03-26 17:04:39.143 DEBUG 15372 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getLatestBlogs    : <==      Total: 2
+2020-03-26 17:04:39.145  INFO 15372 --- [http-nio-8080-exec-1] com.zby.aspect.LogAspect                 : after.....
+2020-03-26 17:04:39.145  INFO 15372 --- [http-nio-8080-exec-1] com.zby.aspect.LogAspect                 : Result : {}common/_fragments :: latestBlog
+2020-03-26 17:04:39.219  INFO 15372 --- [http-nio-8080-exec-4] com.zby.aspect.LogAspect                 : Request:{url='http://localhost:8080/comments/36', ip='0:0:0:0:0:0:0:1', classMethod='com.zby.controller.CommentController.comments', args=[36, {}], uri='/comments/36'}
+2020-03-26 17:04:39.223 DEBUG 15372 --- [http-nio-8080-exec-4] c.z.m.CommentDao.getCommentByIdNoFather  : ==>  Preparing: select * from t_comment where blogId=? and parentCommentId = -1 order by createTime desc 
+2020-03-26 17:04:39.224 DEBUG 15372 --- [http-nio-8080-exec-4] c.z.m.CommentDao.getCommentByIdNoFather  : ==> Parameters: 36(Long)
+2020-03-26 17:04:39.225 DEBUG 15372 --- [http-nio-8080-exec-4] c.z.m.CommentDao.getCommentByIdNoFather  : <==      Total: 0
+2020-03-26 17:04:39.227  INFO 15372 --- [http-nio-8080-exec-4] com.zby.aspect.LogAspect                 : after.....
+2020-03-26 17:04:39.227  INFO 15372 --- [http-nio-8080-exec-4] com.zby.aspect.LogAspect                 : Result : {}blog :: commentList
+2020-03-26 17:07:11.758 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.TypeDao.getAdminType      : ==>  Preparing: select * from t_type 
+2020-03-26 17:07:11.758 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.TypeDao.getAdminType      : ==> Parameters: 
+2020-03-26 17:07:11.760 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.TypeDao.getAdminType      : <==      Total: 1
+2020-03-26 17:07:11.763 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.TagDao.getAdminTag        : ==>  Preparing: select * from t_tag 
+2020-03-26 17:07:11.764 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.TagDao.getAdminTag        : ==> Parameters: 
+2020-03-26 17:07:11.765 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.TagDao.getAdminTag        : <==      Total: 2
+2020-03-26 17:07:11.767 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.BlogDao.getBlogById       : ==>  Preparing: select * from t_blog where id=? 
+2020-03-26 17:07:11.767 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.BlogDao.getBlogById       : ==> Parameters: 36(Long)
+2020-03-26 17:07:11.768 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.UserDao.getUserById       : ====>  Preparing: select * from t_user where id=? 
+2020-03-26 17:07:11.768 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.UserDao.getUserById       : ====> Parameters: 1(Long)
+2020-03-26 17:07:11.769 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.UserDao.getUserById       : <====      Total: 1
+2020-03-26 17:07:11.770 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.TypeDao.getTypeById       : ====>  Preparing: select * from t_type where id=? 
+2020-03-26 17:07:11.770 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.TypeDao.getTypeById       : ====> Parameters: 18(Long)
+2020-03-26 17:07:11.770 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.TypeDao.getTypeById       : <====      Total: 1
+2020-03-26 17:07:11.771 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.TagDao.findTagByBlogId    : ====>  Preparing: select * from t_tag where id in (select tagsId from t_blog_tags where blogsId = ?) 
+2020-03-26 17:07:11.771 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.TagDao.findTagByBlogId    : ====> Parameters: 36(Long)
+2020-03-26 17:07:11.772 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.TagDao.findTagByBlogId    : <====      Total: 2
+2020-03-26 17:07:11.772 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.BlogDao.getBlogById       : <==      Total: 1
+2020-03-26 17:12:32.365 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.TagDao.getById            : ==>  Preparing: select * from t_tag where id=? 
+2020-03-26 17:12:32.365 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.TagDao.getById            : ==> Parameters: 7(Long)
+2020-03-26 17:12:32.367 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.TagDao.getById            : <==      Total: 1
+2020-03-26 17:12:32.367 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.TagDao.getById            : ==>  Preparing: select * from t_tag where id=? 
+2020-03-26 17:12:32.368 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.TagDao.getById            : ==> Parameters: 6(Long)
+2020-03-26 17:12:32.369 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.TagDao.getById            : <==      Total: 1
+2020-03-26 17:12:32.372 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.BlogDao.deleteBlogAndTag  : ==>  Preparing: delete from t_blog_tags where blogsId = ? 
+2020-03-26 17:12:32.372 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.BlogDao.deleteBlogAndTag  : ==> Parameters: 36(Long)
+2020-03-26 17:12:32.374 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.BlogDao.deleteBlogAndTag  : <==    Updates: 2
+2020-03-26 17:12:32.374 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.BlogDao.saveBlogAndTag    : ==>  Preparing: insert into t_blog_tags(blogsId,tagsId) values (?,?) 
+2020-03-26 17:12:32.374 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.BlogDao.saveBlogAndTag    : ==> Parameters: 36(Long), 7(Long)
+2020-03-26 17:12:32.375 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.BlogDao.saveBlogAndTag    : <==    Updates: 1
+2020-03-26 17:12:32.375 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.BlogDao.saveBlogAndTag    : ==>  Preparing: insert into t_blog_tags(blogsId,tagsId) values (?,?) 
+2020-03-26 17:12:32.375 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.BlogDao.saveBlogAndTag    : ==> Parameters: 36(Long), 6(Long)
+2020-03-26 17:12:32.376 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.BlogDao.saveBlogAndTag    : <==    Updates: 1
+2020-03-26 17:12:32.377 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.BlogDao.updateBlog        : ==>  Preparing: update t_blog set title=?,content=?,firstPicture=?,flag=?,appreciation=?,shareStatement=?,commentable=?,published=?,recommend=?,updateTime=?,typeId=?,description=? where id = ? 
+2020-03-26 17:12:32.378 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.BlogDao.updateBlog        : ==> Parameters: 平衡二叉树(String), &emsp;左子树和右子树的高度差的绝对值不超过1.
+![平衡二叉树与二差排序树的差别](/pictures/avl2.png "平衡二叉树与二差排序树的差别")
+
+#### 转化过程
+![变化过程1](/pictures/avl3.png "变化过程1")
+![变化过程2](/pictures/avl4.png "变化过程2")
+![变化过程3](/pictures/avl5.png "变化过程3")
+#### 代码实现
+
+```java
+ public void rightRotate() {
+        //1 创建一个新的节点，值等于当前节点的值
+        Node newRight = new Node(value);
+        //2 把新节点的右子树设置成当前节点的右子树
+        newRight.right=right;
+        //3 把新节点的左子树设置为当前节点的左子树右子树
+        newRight.left=left.right;
+        //4 把当前节点的值设置为左子节点的值
+        value=left.value;
+        //5 把当前节点的左子树设置左子树的左子树
+        left=left.left;
+        //6 把当前节点的右子树设置为新节点
+        right=newRight;
+
+    }
+```
+
+#### 第二种情况
+![0](/pictures/avl6.png "0")
+先将左子树进行左旋转，再进行上面的步骤
+##### 1
+![1](/pictures/avl7.png "1")
+##### 2
+![2](/pictures/avl8.png "2")
+##### 3
+![3](/pictures/avl9.png "3")
+
+#### 代码实现
+先判断左节点的左子树高度是否比右子树小
+```java
+
+    //向子树添加节点
+    public void add(Node node){
+        if (node==null){
+            return;
+        }
+        //判断传入的节点的值比当前子树的根节点的值大还是小
+        //添加的节点比当前节点的值更小
+        if (node.value<this.value){
+            if (this.left==null){
+                //如果左节点为空
+                this.left=node;
+            }else {
+                this.left.add(node);
+            }
+        }else {
+            if (this.right==null){
+                this.right=node;
+            }else {
+                this.right.add(node);
+            }
+        }
+```(String), https://unsplash.it/800/450?image=1002(String), 原创(String), true(Boolean), true(Boolean), true(Boolean), true(Boolean), true(Boolean), 2020-03-26 17:12:32.377(Timestamp), 18(Long), (String), 36(Long)
+2020-03-26 17:12:32.380 DEBUG 15372 --- [http-nio-8080-exec-10] com.zby.mapper.BlogDao.updateBlog        : <==    Updates: 1
+2020-03-26 17:12:32.385 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.queryBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM t_blog 
+2020-03-26 17:12:32.386 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.queryBlog_COUNT   : ==> Parameters: 
+2020-03-26 17:12:32.387 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.queryBlog_COUNT   : <==      Total: 1
+2020-03-26 17:12:32.387 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.queryBlog         : ==>  Preparing: select id,title,updateTime,recommend,published,typeId from t_blog LIMIT ? 
+2020-03-26 17:12:32.387 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.queryBlog         : ==> Parameters: 4(Integer)
+2020-03-26 17:12:32.388 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getTypeById       : ====>  Preparing: select * from t_type where id=? 
+2020-03-26 17:12:32.388 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getTypeById       : ====> Parameters: 18(Long)
+2020-03-26 17:12:32.390 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getTypeById       : <====      Total: 1
+2020-03-26 17:12:32.390 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.queryBlog         : <==      Total: 2
+2020-03-26 17:12:32.392 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getAdminType      : ==>  Preparing: select * from t_type 
+2020-03-26 17:12:32.392 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getAdminType      : ==> Parameters: 
+2020-03-26 17:12:32.393 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getAdminType      : <==      Total: 1
+2020-03-26 17:12:32.394 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.TagDao.getAdminTag        : ==>  Preparing: select * from t_tag 
+2020-03-26 17:12:32.395 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.TagDao.getAdminTag        : ==> Parameters: 
+2020-03-26 17:12:32.395 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.TagDao.getAdminTag        : <==      Total: 2
+2020-03-26 17:12:44.532  INFO 15372 --- [http-nio-8080-exec-7] com.zby.aspect.LogAspect                 : Request:{url='http://localhost:8080/blog/36', ip='0:0:0:0:0:0:0:1', classMethod='com.zby.controller.IndexController.blog', args=[36, {}], uri='/blog/36'}
+2020-03-26 17:12:44.533 DEBUG 15372 --- [http-nio-8080-exec-7] com.zby.mapper.BlogDao.getBlogById       : ==>  Preparing: select * from t_blog where id=? 
+2020-03-26 17:12:44.534 DEBUG 15372 --- [http-nio-8080-exec-7] com.zby.mapper.BlogDao.getBlogById       : ==> Parameters: 36(Long)
+2020-03-26 17:12:44.535 DEBUG 15372 --- [http-nio-8080-exec-7] com.zby.mapper.UserDao.getUserById       : ====>  Preparing: select * from t_user where id=? 
+2020-03-26 17:12:44.535 DEBUG 15372 --- [http-nio-8080-exec-7] com.zby.mapper.UserDao.getUserById       : ====> Parameters: 1(Long)
+2020-03-26 17:12:44.538 DEBUG 15372 --- [http-nio-8080-exec-7] com.zby.mapper.UserDao.getUserById       : <====      Total: 1
+2020-03-26 17:12:44.538 DEBUG 15372 --- [http-nio-8080-exec-7] com.zby.mapper.TypeDao.getTypeById       : ====>  Preparing: select * from t_type where id=? 
+2020-03-26 17:12:44.539 DEBUG 15372 --- [http-nio-8080-exec-7] com.zby.mapper.TypeDao.getTypeById       : ====> Parameters: 18(Long)
+2020-03-26 17:12:44.540 DEBUG 15372 --- [http-nio-8080-exec-7] com.zby.mapper.TypeDao.getTypeById       : <====      Total: 1
+2020-03-26 17:12:44.540 DEBUG 15372 --- [http-nio-8080-exec-7] com.zby.mapper.TagDao.findTagByBlogId    : ====>  Preparing: select * from t_tag where id in (select tagsId from t_blog_tags where blogsId = ?) 
+2020-03-26 17:12:44.541 DEBUG 15372 --- [http-nio-8080-exec-7] com.zby.mapper.TagDao.findTagByBlogId    : ====> Parameters: 36(Long)
+2020-03-26 17:12:44.542 DEBUG 15372 --- [http-nio-8080-exec-7] com.zby.mapper.TagDao.findTagByBlogId    : <====      Total: 2
+2020-03-26 17:12:44.542 DEBUG 15372 --- [http-nio-8080-exec-7] com.zby.mapper.BlogDao.getBlogById       : <==      Total: 1
+2020-03-26 17:12:44.544 DEBUG 15372 --- [http-nio-8080-exec-7] com.zby.mapper.BlogDao.updateViews       : ==>  Preparing: update t_blog set views=views+1 where id=? 
+2020-03-26 17:12:44.544 DEBUG 15372 --- [http-nio-8080-exec-7] com.zby.mapper.BlogDao.updateViews       : ==> Parameters: 36(Long)
+2020-03-26 17:12:44.545 DEBUG 15372 --- [http-nio-8080-exec-7] com.zby.mapper.BlogDao.updateViews       : <==    Updates: 1
+2020-03-26 17:12:44.546  INFO 15372 --- [http-nio-8080-exec-7] com.zby.aspect.LogAspect                 : after.....
+2020-03-26 17:12:44.546  INFO 15372 --- [http-nio-8080-exec-7] com.zby.aspect.LogAspect                 : Result : {}blog
+2020-03-26 17:12:53.776  INFO 15372 --- [http-nio-8080-exec-9] com.zby.aspect.LogAspect                 : Request:{url='http://localhost:8080/footer/latestBlog', ip='0:0:0:0:0:0:0:1', classMethod='com.zby.controller.IndexController.latestBlogs', args=[{}], uri='/footer/latestBlog'}
+2020-03-26 17:12:53.778 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.getLatestBlogs    : ==>  Preparing: select id, title from t_blog order by updateTime desc limit 4 
+2020-03-26 17:12:53.778 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.getLatestBlogs    : ==> Parameters: 
+2020-03-26 17:12:53.779 DEBUG 15372 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.getLatestBlogs    : <==      Total: 2
+2020-03-26 17:12:53.781  INFO 15372 --- [http-nio-8080-exec-9] com.zby.aspect.LogAspect                 : after.....
+2020-03-26 17:12:53.781  INFO 15372 --- [http-nio-8080-exec-9] com.zby.aspect.LogAspect                 : Result : {}common/_fragments :: latestBlog
+2020-03-26 17:12:53.848  INFO 15372 --- [http-nio-8080-exec-1] com.zby.aspect.LogAspect                 : Request:{url='http://localhost:8080/comments/36', ip='0:0:0:0:0:0:0:1', classMethod='com.zby.controller.CommentController.comments', args=[36, {}], uri='/comments/36'}
+2020-03-26 17:12:53.850 DEBUG 15372 --- [http-nio-8080-exec-1] c.z.m.CommentDao.getCommentByIdNoFather  : ==>  Preparing: select * from t_comment where blogId=? and parentCommentId = -1 order by createTime desc 
+2020-03-26 17:12:53.850 DEBUG 15372 --- [http-nio-8080-exec-1] c.z.m.CommentDao.getCommentByIdNoFather  : ==> Parameters: 36(Long)
+2020-03-26 17:12:53.853 DEBUG 15372 --- [http-nio-8080-exec-1] c.z.m.CommentDao.getCommentByIdNoFather  : <==      Total: 0
+2020-03-26 17:12:53.855  INFO 15372 --- [http-nio-8080-exec-1] com.zby.aspect.LogAspect                 : after.....
+2020-03-26 17:12:53.855  INFO 15372 --- [http-nio-8080-exec-1] com.zby.aspect.LogAspect                 : Result : {}blog :: commentList
+2020-03-26 20:07:26.611 DEBUG 15372 --- [http-nio-8080-exec-4] c.z.m.UserDao.findByUsernameAndPassword  : ==>  Preparing: select * from t_user where username=? and password=? 
+2020-03-26 20:07:26.612 DEBUG 15372 --- [http-nio-8080-exec-4] c.z.m.UserDao.findByUsernameAndPassword  : ==> Parameters: zby(String), 310dcbbf4cce62f762a2aaa148d556bd(String)
+2020-03-26 20:07:26.615 DEBUG 15372 --- [http-nio-8080-exec-4] c.z.m.UserDao.findByUsernameAndPassword  : <==      Total: 1

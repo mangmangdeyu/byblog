@@ -1,0 +1,8 @@
+2020-04-23 23:56:24.204  INFO 9716 --- [main] com.zby.ByblogApplicationTests           : Starting ByblogApplicationTests on SC-201811071851 with PID 9716 (started by Administrator in D:\byblog)
+2020-04-23 23:56:24.208 DEBUG 9716 --- [main] com.zby.ByblogApplicationTests           : Running with Spring Boot v2.1.2.RELEASE, Spring v5.1.4.RELEASE
+2020-04-23 23:56:24.208  INFO 9716 --- [main] com.zby.ByblogApplicationTests           : The following profiles are active: dev
+2020-04-23 23:56:25.935  INFO 9716 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-23 23:56:26.149  INFO 9716 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-04-23 23:56:26.378  INFO 9716 --- [main] com.zby.ByblogApplicationTests           : Started ByblogApplicationTests in 2.49 seconds (JVM running for 3.054)
+2020-04-23 23:56:26.622  INFO 9716 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-23 23:56:26.624  INFO 9716 --- [Thread-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...

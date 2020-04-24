@@ -1,0 +1,271 @@
+2020-03-29 20:55:51.389  INFO 15972 --- [restartedMain] com.zby.ByblogApplication                : Starting ByblogApplication on SC-201811071851 with PID 15972 (D:\byblog\target\classes started by Administrator in D:\byblog)
+2020-03-29 20:55:51.393 DEBUG 15972 --- [restartedMain] com.zby.ByblogApplication                : Running with Spring Boot v2.1.2.RELEASE, Spring v5.1.4.RELEASE
+2020-03-29 20:55:51.393  INFO 15972 --- [restartedMain] com.zby.ByblogApplication                : The following profiles are active: dev
+2020-03-29 20:55:51.421  INFO 15972 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-29 20:55:51.421  INFO 15972 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-29 20:55:52.335  INFO 15972 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-29 20:55:52.349  INFO 15972 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-29 20:55:52.349  INFO 15972 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2020-03-29 20:55:52.355  INFO 15972 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk-12.0.2\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;G:\app\Administrator\product\11.2.0\dbhome_1\bin;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Windows\System32;C:\Program Files\MySQL\MySQL Server 5.5\bin;D:\JDBC资料\resources\MySql Connector Java 5.1.23\mysql-connector-java-5.1.23-bin.jar;C:\Program Files\Java\jdk-12.0.2\bin;D:\apache-maven-3.5.2\bin;C:\Program Files\VisualSVN Server\bin;C:\Program Files\TortoiseSVN\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2019.2.1\bin;;.]
+2020-03-29 20:55:52.404  INFO 15972 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-29 20:55:52.404  INFO 15972 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 983 ms
+2020-03-29 20:55:52.895  INFO 15972 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-29 20:55:53.014  INFO 15972 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-29 20:55:53.247  INFO 15972 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-29 20:55:53.282  INFO 15972 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-29 20:55:53.284  INFO 15972 --- [restartedMain] com.zby.ByblogApplication                : Started ByblogApplication in 2.192 seconds (JVM running for 2.838)
+2020-03-29 20:55:59.545  INFO 15972 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-29 20:55:59.546  INFO 15972 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-29 20:55:59.555  INFO 15972 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-03-29 20:55:59.572  INFO 15972 --- [http-nio-8080-exec-1] com.zby.aspect.LogAspect                 : Request:{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.zby.controller.IndexController.index', args=[{}, 1, 6], uri='/'}
+2020-03-29 20:55:59.603  INFO 15972 --- [http-nio-8080-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-03-29 20:55:59.681 DEBUG 15972 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.indexBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM t_blog 
+2020-03-29 20:55:59.691 DEBUG 15972 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.indexBlog_COUNT   : ==> Parameters: 
+2020-03-29 20:55:59.708 DEBUG 15972 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.indexBlog_COUNT   : <==      Total: 1
+2020-03-29 20:55:59.709 DEBUG 15972 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.indexBlog         : ==>  Preparing: select id,title,description,userId,updateTime,views,firstPicture,typeId from t_blog LIMIT ? 
+2020-03-29 20:55:59.709 DEBUG 15972 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.indexBlog         : ==> Parameters: 6(Integer)
+2020-03-29 20:55:59.714 DEBUG 15972 --- [http-nio-8080-exec-1] com.zby.mapper.TypeDao.getTypeById       : ====>  Preparing: select * from t_type where id=? 
+2020-03-29 20:55:59.714 DEBUG 15972 --- [http-nio-8080-exec-1] com.zby.mapper.TypeDao.getTypeById       : ====> Parameters: 18(Long)
+2020-03-29 20:55:59.718 DEBUG 15972 --- [http-nio-8080-exec-1] com.zby.mapper.TypeDao.getTypeById       : <====      Total: 1
+2020-03-29 20:55:59.718 DEBUG 15972 --- [http-nio-8080-exec-1] com.zby.mapper.UserDao.getUserById       : ====>  Preparing: select * from t_user where id=? 
+2020-03-29 20:55:59.718 DEBUG 15972 --- [http-nio-8080-exec-1] com.zby.mapper.UserDao.getUserById       : ====> Parameters: 1(Long)
+2020-03-29 20:55:59.721 DEBUG 15972 --- [http-nio-8080-exec-1] com.zby.mapper.UserDao.getUserById       : <====      Total: 1
+2020-03-29 20:55:59.722 DEBUG 15972 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.indexBlog         : <==      Total: 2
+2020-03-29 20:55:59.727 DEBUG 15972 --- [http-nio-8080-exec-1] com.zby.mapper.TypeDao.indexType         : ==>  Preparing: select * from t_type limit 6 
+2020-03-29 20:55:59.727 DEBUG 15972 --- [http-nio-8080-exec-1] com.zby.mapper.TypeDao.indexType         : ==> Parameters: 
+2020-03-29 20:55:59.727 DEBUG 15972 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getBlogJoinType   : ====>  Preparing: select id,title from t_blog where typeId=? 
+2020-03-29 20:55:59.728 DEBUG 15972 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getBlogJoinType   : ====> Parameters: 18(Long)
+2020-03-29 20:55:59.729 DEBUG 15972 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getBlogJoinType   : <====      Total: 2
+2020-03-29 20:55:59.730 DEBUG 15972 --- [http-nio-8080-exec-1] com.zby.mapper.TypeDao.indexType         : <==      Total: 1
+2020-03-29 20:55:59.733 DEBUG 15972 --- [http-nio-8080-exec-1] com.zby.mapper.TagDao.indexTag           : ==>  Preparing: select * from t_tag limit 6 
+2020-03-29 20:55:59.733 DEBUG 15972 --- [http-nio-8080-exec-1] com.zby.mapper.TagDao.indexTag           : ==> Parameters: 
+2020-03-29 20:55:59.737 DEBUG 15972 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getBlogJoinTag    : ====>  Preparing: select id,title from t_blog where id in (select blogsId from t_blog_tags where tagsId = ?) 
+2020-03-29 20:55:59.737 DEBUG 15972 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getBlogJoinTag    : ====> Parameters: 7(Long)
+2020-03-29 20:55:59.741 DEBUG 15972 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getBlogJoinTag    : <====      Total: 2
+2020-03-29 20:55:59.741 DEBUG 15972 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getBlogJoinTag    : ====>  Preparing: select id,title from t_blog where id in (select blogsId from t_blog_tags where tagsId = ?) 
+2020-03-29 20:55:59.741 DEBUG 15972 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getBlogJoinTag    : ====> Parameters: 6(Long)
+2020-03-29 20:55:59.742 DEBUG 15972 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getBlogJoinTag    : <====      Total: 2
+2020-03-29 20:55:59.742 DEBUG 15972 --- [http-nio-8080-exec-1] com.zby.mapper.TagDao.indexTag           : <==      Total: 2
+2020-03-29 20:55:59.743 DEBUG 15972 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getRecommendBlog  : ==>  Preparing: select id, title from t_blog where recommend=1 order by updateTime desc limit 6 
+2020-03-29 20:55:59.744 DEBUG 15972 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getRecommendBlog  : ==> Parameters: 
+2020-03-29 20:55:59.744 DEBUG 15972 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getRecommendBlog  : <==      Total: 2
+2020-03-29 20:55:59.745  INFO 15972 --- [http-nio-8080-exec-1] com.zby.aspect.LogAspect                 : after.....
+2020-03-29 20:55:59.746  INFO 15972 --- [http-nio-8080-exec-1] com.zby.aspect.LogAspect                 : Result : {}index
+2020-03-29 20:56:20.720  INFO 15972 --- [http-nio-8080-exec-5] com.zby.aspect.LogAspect                 : Request:{url='http://localhost:8080/footer/latestBlog', ip='0:0:0:0:0:0:0:1', classMethod='com.zby.controller.IndexController.latestBlogs', args=[{}], uri='/footer/latestBlog'}
+2020-03-29 20:56:20.722 DEBUG 15972 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.getLatestBlogs    : ==>  Preparing: select id, title from t_blog order by updateTime desc limit 4 
+2020-03-29 20:56:20.722 DEBUG 15972 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.getLatestBlogs    : ==> Parameters: 
+2020-03-29 20:56:20.722 DEBUG 15972 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.getLatestBlogs    : <==      Total: 2
+2020-03-29 20:56:20.723  INFO 15972 --- [http-nio-8080-exec-5] com.zby.aspect.LogAspect                 : after.....
+2020-03-29 20:56:20.723  INFO 15972 --- [http-nio-8080-exec-5] com.zby.aspect.LogAspect                 : Result : {}common/_fragments :: latestBlog
+2020-03-29 20:57:03.750  WARN 15972 --- [http-nio-8080-exec-2] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [148] milliseconds.
+2020-03-29 20:57:03.754 DEBUG 15972 --- [http-nio-8080-exec-2] c.z.m.UserDao.findByUsernameAndPassword  : ==>  Preparing: select * from t_user where username=? and password=? 
+2020-03-29 20:57:03.754 DEBUG 15972 --- [http-nio-8080-exec-2] c.z.m.UserDao.findByUsernameAndPassword  : ==> Parameters: zby(String), 310dcbbf4cce62f762a2aaa148d556bd(String)
+2020-03-29 20:57:03.755 DEBUG 15972 --- [http-nio-8080-exec-2] c.z.m.UserDao.findByUsernameAndPassword  : <==      Total: 1
+2020-03-29 20:57:33.692  INFO 15972 --- [Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-29 20:57:33.692  INFO 15972 --- [Thread-5] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2020-03-29 20:57:33.695  INFO 15972 --- [Thread-5] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-03-29 20:57:40.472  INFO 15972 --- [restartedMain] com.zby.ByblogApplication                : Starting ByblogApplication on SC-201811071851 with PID 15972 (D:\byblog\target\classes started by Administrator in D:\byblog)
+2020-03-29 20:57:40.473 DEBUG 15972 --- [restartedMain] com.zby.ByblogApplication                : Running with Spring Boot v2.1.2.RELEASE, Spring v5.1.4.RELEASE
+2020-03-29 20:57:40.473  INFO 15972 --- [restartedMain] com.zby.ByblogApplication                : The following profiles are active: dev
+2020-03-29 20:57:40.709  INFO 15972 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-29 20:57:40.710  INFO 15972 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-29 20:57:40.710  INFO 15972 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2020-03-29 20:57:40.725  INFO 15972 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-03-29 20:57:40.725  INFO 15972 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 251 ms
+2020-03-29 20:57:40.869  WARN 15972 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'indexController': Unsatisfied dependency expressed through field 'typeService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.zby.service.TypeService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-03-29 20:57:40.869  INFO 15972 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2020-03-29 20:57:40.869  INFO 15972 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-03-29 20:57:40.874  INFO 15972 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-03-29 20:57:40.966 ERROR 15972 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field typeService in com.zby.controller.IndexController required a bean of type 'com.zby.service.TypeService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.zby.service.TypeService' in your configuration.
+
+2020-03-29 20:57:47.591  INFO 16132 --- [main] com.zby.ByblogApplicationTests           : Starting ByblogApplicationTests on SC-201811071851 with PID 16132 (started by Administrator in D:\byblog)
+2020-03-29 20:57:47.592 DEBUG 16132 --- [main] com.zby.ByblogApplicationTests           : Running with Spring Boot v2.1.2.RELEASE, Spring v5.1.4.RELEASE
+2020-03-29 20:57:47.592  INFO 16132 --- [main] com.zby.ByblogApplicationTests           : The following profiles are active: dev
+2020-03-29 20:57:49.250  INFO 16132 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-29 20:57:49.467  INFO 16132 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-29 20:57:49.721  INFO 16132 --- [main] com.zby.ByblogApplicationTests           : Started ByblogApplicationTests in 2.4 seconds (JVM running for 2.843)
+2020-03-29 20:57:49.981  INFO 16132 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-29 20:57:49.983  INFO 16132 --- [Thread-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2020-03-29 20:57:58.897  INFO 17008 --- [restartedMain] com.zby.ByblogApplication                : Starting ByblogApplication on SC-201811071851 with PID 17008 (D:\byblog\target\classes started by Administrator in D:\byblog)
+2020-03-29 20:57:58.899 DEBUG 17008 --- [restartedMain] com.zby.ByblogApplication                : Running with Spring Boot v2.1.2.RELEASE, Spring v5.1.4.RELEASE
+2020-03-29 20:57:58.899  INFO 17008 --- [restartedMain] com.zby.ByblogApplication                : The following profiles are active: dev
+2020-03-29 20:57:58.922  INFO 17008 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-29 20:57:58.922  INFO 17008 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-29 20:57:59.765  INFO 17008 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-29 20:57:59.780  INFO 17008 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-29 20:57:59.780  INFO 17008 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.14]
+2020-03-29 20:57:59.785  INFO 17008 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk-12.0.2\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;G:\app\Administrator\product\11.2.0\dbhome_1\bin;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Windows\System32;C:\Program Files\MySQL\MySQL Server 5.5\bin;D:\JDBC资料\resources\MySql Connector Java 5.1.23\mysql-connector-java-5.1.23-bin.jar;C:\Program Files\Java\jdk-12.0.2\bin;D:\apache-maven-3.5.2\bin;C:\Program Files\VisualSVN Server\bin;C:\Program Files\TortoiseSVN\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2019.2.1\bin;;.]
+2020-03-29 20:57:59.830  INFO 17008 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-29 20:57:59.831  INFO 17008 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 909 ms
+2020-03-29 20:58:00.269  INFO 17008 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-29 20:58:00.387  INFO 17008 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-03-29 20:58:00.581  INFO 17008 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-29 20:58:00.616  INFO 17008 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-29 20:58:00.619  INFO 17008 --- [restartedMain] com.zby.ByblogApplication                : Started ByblogApplication in 1.939 seconds (JVM running for 2.478)
+2020-03-29 20:58:05.747  INFO 17008 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-29 20:58:05.748  INFO 17008 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-29 20:58:05.755  INFO 17008 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-03-29 20:58:05.802  INFO 17008 --- [http-nio-8080-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-03-29 20:58:05.847 DEBUG 17008 --- [http-nio-8080-exec-1] c.z.m.UserDao.findByUsernameAndPassword  : ==>  Preparing: select * from t_user where username=? and password=? 
+2020-03-29 20:58:05.857 DEBUG 17008 --- [http-nio-8080-exec-1] c.z.m.UserDao.findByUsernameAndPassword  : ==> Parameters: zby(String), 310dcbbf4cce62f762a2aaa148d556bd(String)
+2020-03-29 20:58:05.871 DEBUG 17008 --- [http-nio-8080-exec-1] c.z.m.UserDao.findByUsernameAndPassword  : <==      Total: 1
+2020-03-29 20:58:30.202 DEBUG 17008 --- [http-nio-8080-exec-2] c.z.m.UserDao.findByUsernameAndPassword  : ==>  Preparing: select * from t_user where username=? and password=? 
+2020-03-29 20:58:30.203 DEBUG 17008 --- [http-nio-8080-exec-2] c.z.m.UserDao.findByUsernameAndPassword  : ==> Parameters: zby(String), 310dcbbf4cce62f762a2aaa148d556bd(String)
+2020-03-29 20:58:30.204 DEBUG 17008 --- [http-nio-8080-exec-2] c.z.m.UserDao.findByUsernameAndPassword  : <==      Total: 1
+2020-03-29 20:58:53.035 DEBUG 17008 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.queryBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM t_blog 
+2020-03-29 20:58:53.035 DEBUG 17008 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.queryBlog_COUNT   : ==> Parameters: 
+2020-03-29 20:58:53.037 DEBUG 17008 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.queryBlog_COUNT   : <==      Total: 1
+2020-03-29 20:58:53.037 DEBUG 17008 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.queryBlog         : ==>  Preparing: select id,title,updateTime,recommend,published,typeId from t_blog LIMIT ? 
+2020-03-29 20:58:53.037 DEBUG 17008 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.queryBlog         : ==> Parameters: 4(Integer)
+2020-03-29 20:58:53.039 DEBUG 17008 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getTypeById       : ====>  Preparing: select * from t_type where id=? 
+2020-03-29 20:58:53.039 DEBUG 17008 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getTypeById       : ====> Parameters: 18(Long)
+2020-03-29 20:58:53.040 DEBUG 17008 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getTypeById       : <====      Total: 1
+2020-03-29 20:58:53.041 DEBUG 17008 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.queryBlog         : <==      Total: 2
+2020-03-29 20:58:53.046 DEBUG 17008 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getAdminType      : ==>  Preparing: select * from t_type 
+2020-03-29 20:58:53.046 DEBUG 17008 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getAdminType      : ==> Parameters: 
+2020-03-29 20:58:53.047 DEBUG 17008 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getAdminType      : <==      Total: 1
+2020-03-29 20:58:53.051 DEBUG 17008 --- [http-nio-8080-exec-9] com.zby.mapper.TagDao.getAdminTag        : ==>  Preparing: select * from t_tag 
+2020-03-29 20:58:53.051 DEBUG 17008 --- [http-nio-8080-exec-9] com.zby.mapper.TagDao.getAdminTag        : ==> Parameters: 
+2020-03-29 20:58:53.053 DEBUG 17008 --- [http-nio-8080-exec-9] com.zby.mapper.TagDao.getAdminTag        : <==      Total: 2
+2020-03-29 20:59:26.153 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.TypeDao.getAdminType      : ==>  Preparing: select * from t_type 
+2020-03-29 20:59:26.153 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.TypeDao.getAdminType      : ==> Parameters: 
+2020-03-29 20:59:26.155 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.TypeDao.getAdminType      : <==      Total: 1
+2020-03-29 20:59:26.157 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.TagDao.getAdminTag        : ==>  Preparing: select * from t_tag 
+2020-03-29 20:59:26.158 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.TagDao.getAdminTag        : ==> Parameters: 
+2020-03-29 20:59:26.159 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.TagDao.getAdminTag        : <==      Total: 2
+2020-03-29 21:04:18.936 DEBUG 17008 --- [http-nio-8080-exec-7] com.zby.mapper.TagDao.getById            : ==>  Preparing: select * from t_tag where id=? 
+2020-03-29 21:04:18.936 DEBUG 17008 --- [http-nio-8080-exec-7] com.zby.mapper.TagDao.getById            : ==> Parameters: 7(Long)
+2020-03-29 21:04:18.939 DEBUG 17008 --- [http-nio-8080-exec-7] com.zby.mapper.TagDao.getById            : <==      Total: 1
+2020-03-29 21:04:18.941 DEBUG 17008 --- [http-nio-8080-exec-7] com.zby.mapper.BlogDao.saveBlog          : ==>  Preparing: insert into t_blog(id, title, content, firstPicture, flag, views, appreciation, shareStatement, commentable, published, recommend, creatTime, updateTime, typeId, userId, description) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) 
+2020-03-29 21:04:18.942 DEBUG 17008 --- [http-nio-8080-exec-7] com.zby.mapper.BlogDao.saveBlog          : ==> Parameters: null, 深入理解Java中的i++、++i语句(String), ```java
+{
+    int i = 1;
+    int j1 = i++;
+    System.out.println("j1=" + j1); // 输出 j1=1
+    System.out.println("i=" + i); // 输出 i=2
+}
+
+{
+    int i = 1;
+    int j2 = ++i;
+    System.out.println("j2=" + j2); // 输出 j2=2
+    System.out.println("i=" + i); // 输出 i=2
+}
+```
+
+上面的例子中可以看到，无论是i++和++i指令，对于i变量本身来说是没有任何区别，指令执行的结果都是i变量的值加1。而对于j1和j2来说，这就是区别所在。
+
+```java
+int i = 1;
+int j1 = i++; // 先将i的原始值（1）赋值给变量j1（1），然后i变量的值加1
+int j1 = ++i; // 先将i变量的值加1，然后将i的当前值（2）赋值给变量j1（2）
+```
+
+
+出处http://hinylover.space/2017/07/30/java-i-self-increament/(String), https://unsplash.it/800/450?image=1002(String), 转载(String), 0(Integer), false(Boolean), false(Boolean), true(Boolean), true(Boolean), false(Boolean), 2020-03-29 21:04:18.941(Timestamp), 2020-03-29 21:04:18.941(Timestamp), 18(Long), 1(Long), (String)
+2020-03-29 21:04:18.945 DEBUG 17008 --- [http-nio-8080-exec-7] com.zby.mapper.BlogDao.saveBlog          : <==    Updates: 1
+2020-03-29 21:04:18.948 DEBUG 17008 --- [http-nio-8080-exec-7] com.zby.mapper.BlogDao.saveBlogAndTag    : ==>  Preparing: insert into t_blog_tags(blogsId,tagsId) values (?,?) 
+2020-03-29 21:04:18.948 DEBUG 17008 --- [http-nio-8080-exec-7] com.zby.mapper.BlogDao.saveBlogAndTag    : ==> Parameters: 37(Long), 7(Long)
+2020-03-29 21:04:18.950 DEBUG 17008 --- [http-nio-8080-exec-7] com.zby.mapper.BlogDao.saveBlogAndTag    : <==    Updates: 1
+2020-03-29 21:04:18.964 DEBUG 17008 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.queryBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM t_blog 
+2020-03-29 21:04:18.964 DEBUG 17008 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.queryBlog_COUNT   : ==> Parameters: 
+2020-03-29 21:04:18.966 DEBUG 17008 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.queryBlog_COUNT   : <==      Total: 1
+2020-03-29 21:04:18.967 DEBUG 17008 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.queryBlog         : ==>  Preparing: select id,title,updateTime,recommend,published,typeId from t_blog LIMIT ? 
+2020-03-29 21:04:18.967 DEBUG 17008 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.queryBlog         : ==> Parameters: 4(Integer)
+2020-03-29 21:04:18.968 DEBUG 17008 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getTypeById       : ====>  Preparing: select * from t_type where id=? 
+2020-03-29 21:04:18.969 DEBUG 17008 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getTypeById       : ====> Parameters: 18(Long)
+2020-03-29 21:04:18.971 DEBUG 17008 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getTypeById       : <====      Total: 1
+2020-03-29 21:04:18.972 DEBUG 17008 --- [http-nio-8080-exec-9] com.zby.mapper.BlogDao.queryBlog         : <==      Total: 3
+2020-03-29 21:04:18.975 DEBUG 17008 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getAdminType      : ==>  Preparing: select * from t_type 
+2020-03-29 21:04:18.975 DEBUG 17008 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getAdminType      : ==> Parameters: 
+2020-03-29 21:04:18.976 DEBUG 17008 --- [http-nio-8080-exec-9] com.zby.mapper.TypeDao.getAdminType      : <==      Total: 1
+2020-03-29 21:04:18.979 DEBUG 17008 --- [http-nio-8080-exec-9] com.zby.mapper.TagDao.getAdminTag        : ==>  Preparing: select * from t_tag 
+2020-03-29 21:04:18.979 DEBUG 17008 --- [http-nio-8080-exec-9] com.zby.mapper.TagDao.getAdminTag        : ==> Parameters: 
+2020-03-29 21:04:18.982 DEBUG 17008 --- [http-nio-8080-exec-9] com.zby.mapper.TagDao.getAdminTag        : <==      Total: 2
+2020-03-29 21:04:40.163  INFO 17008 --- [http-nio-8080-exec-6] com.zby.aspect.LogAspect                 : Request:{url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.zby.controller.IndexController.index', args=[{}, 1, 6], uri='/'}
+2020-03-29 21:04:40.167 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.indexBlog_COUNT   : ==>  Preparing: SELECT count(0) FROM t_blog 
+2020-03-29 21:04:40.167 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.indexBlog_COUNT   : ==> Parameters: 
+2020-03-29 21:04:40.169 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.indexBlog_COUNT   : <==      Total: 1
+2020-03-29 21:04:40.170 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.indexBlog         : ==>  Preparing: select id,title,description,userId,updateTime,views,firstPicture,typeId from t_blog LIMIT ? 
+2020-03-29 21:04:40.170 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.indexBlog         : ==> Parameters: 6(Integer)
+2020-03-29 21:04:40.172 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.TypeDao.getTypeById       : ====>  Preparing: select * from t_type where id=? 
+2020-03-29 21:04:40.173 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.TypeDao.getTypeById       : ====> Parameters: 18(Long)
+2020-03-29 21:04:40.174 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.TypeDao.getTypeById       : <====      Total: 1
+2020-03-29 21:04:40.174 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.UserDao.getUserById       : ====>  Preparing: select * from t_user where id=? 
+2020-03-29 21:04:40.174 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.UserDao.getUserById       : ====> Parameters: 1(Long)
+2020-03-29 21:04:40.177 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.UserDao.getUserById       : <====      Total: 1
+2020-03-29 21:04:40.178 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.indexBlog         : <==      Total: 3
+2020-03-29 21:04:40.181 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.TypeDao.indexType         : ==>  Preparing: select * from t_type limit 6 
+2020-03-29 21:04:40.181 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.TypeDao.indexType         : ==> Parameters: 
+2020-03-29 21:04:40.182 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.getBlogJoinType   : ====>  Preparing: select id,title from t_blog where typeId=? 
+2020-03-29 21:04:40.183 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.getBlogJoinType   : ====> Parameters: 18(Long)
+2020-03-29 21:04:40.184 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.getBlogJoinType   : <====      Total: 3
+2020-03-29 21:04:40.184 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.TypeDao.indexType         : <==      Total: 1
+2020-03-29 21:04:40.186 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.TagDao.indexTag           : ==>  Preparing: select * from t_tag limit 6 
+2020-03-29 21:04:40.187 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.TagDao.indexTag           : ==> Parameters: 
+2020-03-29 21:04:40.188 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.getBlogJoinTag    : ====>  Preparing: select id,title from t_blog where id in (select blogsId from t_blog_tags where tagsId = ?) 
+2020-03-29 21:04:40.188 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.getBlogJoinTag    : ====> Parameters: 7(Long)
+2020-03-29 21:04:40.189 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.getBlogJoinTag    : <====      Total: 3
+2020-03-29 21:04:40.189 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.getBlogJoinTag    : ====>  Preparing: select id,title from t_blog where id in (select blogsId from t_blog_tags where tagsId = ?) 
+2020-03-29 21:04:40.190 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.getBlogJoinTag    : ====> Parameters: 6(Long)
+2020-03-29 21:04:40.191 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.getBlogJoinTag    : <====      Total: 2
+2020-03-29 21:04:40.192 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.TagDao.indexTag           : <==      Total: 2
+2020-03-29 21:04:40.195 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.getRecommendBlog  : ==>  Preparing: select id, title from t_blog where recommend=1 order by updateTime desc limit 6 
+2020-03-29 21:04:40.196 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.getRecommendBlog  : ==> Parameters: 
+2020-03-29 21:04:40.197 DEBUG 17008 --- [http-nio-8080-exec-6] com.zby.mapper.BlogDao.getRecommendBlog  : <==      Total: 2
+2020-03-29 21:04:40.199  INFO 17008 --- [http-nio-8080-exec-6] com.zby.aspect.LogAspect                 : after.....
+2020-03-29 21:04:40.199  INFO 17008 --- [http-nio-8080-exec-6] com.zby.aspect.LogAspect                 : Result : {}index
+2020-03-29 21:04:40.666  INFO 17008 --- [http-nio-8080-exec-1] com.zby.aspect.LogAspect                 : Request:{url='http://localhost:8080/footer/latestBlog', ip='0:0:0:0:0:0:0:1', classMethod='com.zby.controller.IndexController.latestBlogs', args=[{}], uri='/footer/latestBlog'}
+2020-03-29 21:04:40.667 DEBUG 17008 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getLatestBlogs    : ==>  Preparing: select id, title from t_blog order by updateTime desc limit 4 
+2020-03-29 21:04:40.668 DEBUG 17008 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getLatestBlogs    : ==> Parameters: 
+2020-03-29 21:04:40.669 DEBUG 17008 --- [http-nio-8080-exec-1] com.zby.mapper.BlogDao.getLatestBlogs    : <==      Total: 3
+2020-03-29 21:04:40.671  INFO 17008 --- [http-nio-8080-exec-1] com.zby.aspect.LogAspect                 : after.....
+2020-03-29 21:04:40.671  INFO 17008 --- [http-nio-8080-exec-1] com.zby.aspect.LogAspect                 : Result : {}common/_fragments :: latestBlog
+2020-03-29 21:04:42.898  INFO 17008 --- [http-nio-8080-exec-3] com.zby.aspect.LogAspect                 : Request:{url='http://localhost:8080/blog/37', ip='0:0:0:0:0:0:0:1', classMethod='com.zby.controller.IndexController.blog', args=[37, {}], uri='/blog/37'}
+2020-03-29 21:04:42.900 DEBUG 17008 --- [http-nio-8080-exec-3] com.zby.mapper.BlogDao.getBlogById       : ==>  Preparing: select * from t_blog where id=? 
+2020-03-29 21:04:42.900 DEBUG 17008 --- [http-nio-8080-exec-3] com.zby.mapper.BlogDao.getBlogById       : ==> Parameters: 37(Long)
+2020-03-29 21:04:42.902 DEBUG 17008 --- [http-nio-8080-exec-3] com.zby.mapper.UserDao.getUserById       : ====>  Preparing: select * from t_user where id=? 
+2020-03-29 21:04:42.903 DEBUG 17008 --- [http-nio-8080-exec-3] com.zby.mapper.UserDao.getUserById       : ====> Parameters: 1(Long)
+2020-03-29 21:04:42.906 DEBUG 17008 --- [http-nio-8080-exec-3] com.zby.mapper.UserDao.getUserById       : <====      Total: 1
+2020-03-29 21:04:42.906 DEBUG 17008 --- [http-nio-8080-exec-3] com.zby.mapper.TypeDao.getTypeById       : ====>  Preparing: select * from t_type where id=? 
+2020-03-29 21:04:42.906 DEBUG 17008 --- [http-nio-8080-exec-3] com.zby.mapper.TypeDao.getTypeById       : ====> Parameters: 18(Long)
+2020-03-29 21:04:42.907 DEBUG 17008 --- [http-nio-8080-exec-3] com.zby.mapper.TypeDao.getTypeById       : <====      Total: 1
+2020-03-29 21:04:42.907 DEBUG 17008 --- [http-nio-8080-exec-3] com.zby.mapper.TagDao.findTagByBlogId    : ====>  Preparing: select * from t_tag where id in (select tagsId from t_blog_tags where blogsId = ?) 
+2020-03-29 21:04:42.908 DEBUG 17008 --- [http-nio-8080-exec-3] com.zby.mapper.TagDao.findTagByBlogId    : ====> Parameters: 37(Long)
+2020-03-29 21:04:42.909 DEBUG 17008 --- [http-nio-8080-exec-3] com.zby.mapper.TagDao.findTagByBlogId    : <====      Total: 1
+2020-03-29 21:04:42.909 DEBUG 17008 --- [http-nio-8080-exec-3] com.zby.mapper.BlogDao.getBlogById       : <==      Total: 1
+2020-03-29 21:04:42.924 DEBUG 17008 --- [http-nio-8080-exec-3] com.zby.mapper.BlogDao.updateViews       : ==>  Preparing: update t_blog set views=views+1 where id=? 
+2020-03-29 21:04:42.924 DEBUG 17008 --- [http-nio-8080-exec-3] com.zby.mapper.BlogDao.updateViews       : ==> Parameters: 37(Long)
+2020-03-29 21:04:42.926 DEBUG 17008 --- [http-nio-8080-exec-3] com.zby.mapper.BlogDao.updateViews       : <==    Updates: 1
+2020-03-29 21:04:42.928  INFO 17008 --- [http-nio-8080-exec-3] com.zby.aspect.LogAspect                 : after.....
+2020-03-29 21:04:42.928  INFO 17008 --- [http-nio-8080-exec-3] com.zby.aspect.LogAspect                 : Result : {}blog
+2020-03-29 21:04:43.140  INFO 17008 --- [http-nio-8080-exec-5] com.zby.aspect.LogAspect                 : Request:{url='http://localhost:8080/footer/latestBlog', ip='0:0:0:0:0:0:0:1', classMethod='com.zby.controller.IndexController.latestBlogs', args=[{}], uri='/footer/latestBlog'}
+2020-03-29 21:04:43.142 DEBUG 17008 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.getLatestBlogs    : ==>  Preparing: select id, title from t_blog order by updateTime desc limit 4 
+2020-03-29 21:04:43.142 DEBUG 17008 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.getLatestBlogs    : ==> Parameters: 
+2020-03-29 21:04:43.142 DEBUG 17008 --- [http-nio-8080-exec-5] com.zby.mapper.BlogDao.getLatestBlogs    : <==      Total: 3
+2020-03-29 21:04:43.143  INFO 17008 --- [http-nio-8080-exec-5] com.zby.aspect.LogAspect                 : after.....
+2020-03-29 21:04:43.144  INFO 17008 --- [http-nio-8080-exec-5] com.zby.aspect.LogAspect                 : Result : {}common/_fragments :: latestBlog
+2020-03-29 21:04:43.246  INFO 17008 --- [http-nio-8080-exec-8] com.zby.aspect.LogAspect                 : Request:{url='http://localhost:8080/comments/37', ip='0:0:0:0:0:0:0:1', classMethod='com.zby.controller.CommentController.comments', args=[37, {}], uri='/comments/37'}
+2020-03-29 21:04:43.250 DEBUG 17008 --- [http-nio-8080-exec-8] c.z.m.CommentDao.getCommentByIdNoFather  : ==>  Preparing: select * from t_comment where blogId=? and parentCommentId = -1 order by createTime desc 
+2020-03-29 21:04:43.251 DEBUG 17008 --- [http-nio-8080-exec-8] c.z.m.CommentDao.getCommentByIdNoFather  : ==> Parameters: 37(Long)
+2020-03-29 21:04:43.255 DEBUG 17008 --- [http-nio-8080-exec-8] c.z.m.CommentDao.getCommentByIdNoFather  : <==      Total: 0
+2020-03-29 21:04:43.257  INFO 17008 --- [http-nio-8080-exec-8] com.zby.aspect.LogAspect                 : after.....
+2020-03-29 21:04:43.257  INFO 17008 --- [http-nio-8080-exec-8] com.zby.aspect.LogAspect                 : Result : {}blog :: commentList
